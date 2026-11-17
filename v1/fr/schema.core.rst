@@ -724,7 +724,8 @@ Une ``dependency`` est un mapping comportant les propriétés suivantes :
 -  ``versionMin`` - la version compatible la plus ancienne ;
 -  ``versionMax`` - la version compatible la plus récente ;
 -  ``version`` - la version principale avec laquelle le logiciel est compatible. Cela suppose une compatibilité avec l'ensemble des correctifs et des corrections de bogues appliqués ultérieurement à cette version ;
--  ``optional`` - si la dépendance est facultative ou obligatoire.
+-  ``optional`` - booléen : si ``true``, le logiciel fonctionne aussi sans
+   la dépendance. La valeur par défaut est ``false``.
 
 Gestion de versions complexe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
