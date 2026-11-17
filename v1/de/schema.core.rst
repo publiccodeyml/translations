@@ -392,7 +392,7 @@ software.
 **Note:** since all the strings contained in this section are
 user-visible and written in a specific language, you **must** specify
 the language you are editing the text in (using the IETF 
-`BCP 47 <https://www.rfc-editor.org/info/bcp47/>`__ specifications) by
+BCP 47 specifications for a :ref:`language tag <language-tag-type>`) by
 creating a sub-section with that name. The primary language subtag cannot be
 omitted, as mandated by the BCP 47.  
 
@@ -679,7 +679,7 @@ than one language.
 Key ``localisation/availableLanguages``
 '''''''''''''''''''''''''''''''''''''''
 
--  Typ: Liste von Sprach-Tags nach IETF BCP 47
+-  Typ: Liste von :ref:`Sprach-Tags <language-tag-type>` nach IETF BCP 47
 -  Vorhandensein: obligatorisch
 -  Beispiel: ``"it"``, ``"en"``, ``"sl-IT-nedis"``
 
