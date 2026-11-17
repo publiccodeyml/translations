@@ -13,9 +13,9 @@ Zu den Informationen, die in einer publiccode.yml-Datei enthalten sind, gehören
 
 * Name und Beschreibung des Projekts oder Produkts (in einer oder mehreren Sprachen);
 
-* Der Entwicklungsgrad (z. B. Konzept, in Entwicklung, Beta-Version, stabile Version, veraltet);
+* Der Entwicklungsgrad (z. B. ``concept``, ``development``, ``beta``, ``stable``, ``obsolete``);
 
-* Kontaktdaten der Institution, die die Code-Basis veröffentlicht hat;
+* Name und URI der Organisation, die die Software veröffentlicht;
 
 * Kontaktdaten der pflegenden Institution (wenn vorhanden), inklusive des Ablaufdatums des Pflegevertrags;
 

@@ -30,7 +30,7 @@ Les détails apportés par un fichier ``publiccode.yml`` inclus :
 
 - titre et description du projet ou produit (dans un ou plusieurs languages);
 - l'état du développement, par exemple : ``concept``, ``development``, ``beta``, ``stable``, ``obsolete``;
-- les conctacts de l'entité qui publie la codebase;
+- le nom et l'URI de l'organisation qui publie le logiciel;
 - les contacts des mainteneurs, si il y en a, incluant la date d'expiration du contrat de maintenance;
 - des informations à propos du context légal pour lequel le projet ou le produit a été créé;
 - les dépendances
