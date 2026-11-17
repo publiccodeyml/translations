@@ -854,7 +854,7 @@ Un Contractor è un mapping con le seguenti proprietà:
    un’azienda o una persona fisica.
 -  ``until`` - **obbligatoria** - Questa è una data (YYYY-MM-DD). Questa
    chiave deve contenere una data alla quale la manutenzione finirà. Nel
-   caso di manutenzione gestita dalla community, questo valore non deve
+   caso di manutenzione gestita dalla community, questo valore NON DOVREBBE
    essere maggiore di 2 anni nel futuro, e quindi deve essere
    regolarmente aggiornato man mano che la community continua a lavorare
    al progetto.
