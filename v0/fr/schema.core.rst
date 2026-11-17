@@ -73,7 +73,7 @@ Clé ``landingURL``
 
 Si le paramètre de l’``url`` ne renvoie pas à une page lisible par un humain,
 mais sert uniquement à rediriger vers le code source d’un logiciel de gestion
-de version, avec cette clé, il est possible d'ajouter une option pour spécifer
+de version, avec cette clé, il est possible d'ajouter une option pour spécifier
 la *landing page*. Dans le cas où le produit comprend un programme d'installation
 graphique automatique, cette URL peut pointer vers une page qui contient une
 référence au code source et qui offre la possibilité de télécharger le programme
@@ -214,7 +214,7 @@ Clé ``categories``
 -  Présence: facultative
 -  Valeurs acceptées: voir :ref:`categories-list` 
 
-Une liste des categories qui peuvent être utilisés pour décrire le logiciel
+Une liste des catégories qui peuvent être utilisées pour décrire le logiciel
 et aider à la constitution d'un catalogue des logiciels ouverts.
 
 Le vocabulaire contrôlé de la :ref:`categories-list` présente la liste
@@ -232,7 +232,7 @@ logiciel, comme étant des utilisateurs.
 
 Les programmes d'analyses syntaxiques sont encouragés pour permettre
 d'améliorer cette liste avec des informations complémentaires qui peuvent
-être obtenu indépendamment ; par exemple, la fourche d’un logiciel 
+être obtenues indépendamment ; par exemple, la fourche d’un logiciel 
 détenue par une administration, peut être utilisée comme un signal
 d’utilisation du logiciel.
 
@@ -268,8 +268,8 @@ Les valeurs autorisées sont:
 
 -  ``concept`` - Le logiciel est encore un « concept » : aucun code n’a été
    développé, et le dépôt peut exister symboliquement, dans l'attente.
--  ``development`` - Des efforts ont été fournits quant au développement
-   du logiciel, mais le code n’est pas prêt pour un utilisateurs final, pas même
+-  ``development`` - Des efforts ont été fournis quant au développement
+   du logiciel, mais le code n’est pas prêt pour un utilisateur final, pas même
    dans une version préliminaire (bêta ou alpha) à tester par les utilisateurs.
 -  ``beta`` -  Le logiciel est en phase de test (alpha ou beta).
    À ce stade, le logiciel peut avoir eu ou non une première version de publiée.
@@ -308,7 +308,7 @@ Les valeurs autorisées sont:
    pour faciliter la création de nouveaux produits par des développeurs tiers.
 -  ``configurationFiles`` - Le logiciel ne contient pas de script
    exécutable, mais une série de fichiers de configuration. Ils peuvent
-   documenter la manière d'obtenir un certain type déploiement. Les fichiers
+   documenter la manière d'obtenir un certain type de déploiement. Les fichiers
    susmentionnés peuvent prendre la forme de simples fichiers de configuration,
    des scripts bash, de playbook ansible, de fichiers *dockerfiles*,
    ou d’autres jeux d’instructions.
@@ -554,7 +554,7 @@ Clé ``description/[lang]/apiDocumentation``
 -  Présence: facultative
 
 Cette clé contient une référence à la documentation de l’API du logiciel.
-La valeur doit être une URL pointant une version hébergée de la documentation.
+La valeur doit être une URL pointant vers une version hébergée de la documentation.
 
 Il est suggéré que cette URL pointe vers une version hébergée de la
 documentation qui est immédiatement lisible via un navigateur web commun.
@@ -564,7 +564,7 @@ référence ou un test de déploiement, cela devrait permettre de proposer
 une interface interactive (ex. Swagger).
 
 Si la documentation est uniquement disponible sous la forme d'un document,
-il est necessaire d'insérer un lien dans la clé, sous la forme d'une URL,
+il est nécessaire d'insérer un lien dans la clé, sous la forme d'une URL,
 pour afficher / télécharger le document. Il est conseillé de traiter la
 documentation comme faisant partie du code source et donc de la gérer au 
 travers de commits vers le code source du dépôt. De cette manière, il sera
@@ -585,8 +585,8 @@ Clé ``description/[lang]/features``
 
 Cette clé contient une liste des fonctionnalités du logiciel qui décrit
 ce que permet de faire le logiciel. Les destinataires de ce texte sont les décideurs
-publics qui utiliserons le logiciel. En conséquence, la liste des
-fonctionnalités ne s'adressent pas aux développeurs : plutôt que de lister
+publics qui utiliseront le logiciel. En conséquence, la liste des
+fonctionnalités ne s'adresse pas aux développeurs : plutôt que de lister
 les caractéristiques techniques qui renvoient à l'implémentation de détails,
 il est préférable de lister les fonctionnalités utiles aux utilisateurs
 du logiciel.
@@ -605,10 +605,10 @@ Clé ``description/[lang]/screenshots``
 -  Exemple: ``"data/screenshots/configuration.png"``
 
 Cette clé contient un ou plusieurs chemins vers les fichiers montrant des
-captures d'écran du logiciel. Elles ont pour but de donner une aperçu
+captures d'écran du logiciel. Elles ont pour but de donner un aperçu
 de l’apparence du logiciel et de son fonctionnement. La valeur peut être
 soit le chemin relatif du fichier à partir de la racine du dépôt, soit une
-URL absolu pointant vers la version brute de l'image de capture d'écran.
+URL absolue pointant vers la version brute de l'image de capture d'écran.
 Dans les deux cas, le fichier doit être situé dans le même dépôt que le
 fichier ``publiccode.yml``.
 
@@ -633,7 +633,7 @@ Les vidéos doivent être hébergées sur une plateforme de partage de vidéos
 qui supporte le standard `oEmbed <https://oembed.com>`__ ; Youtube et Vimeo
 sont des alternatives populaires.
 
-**N.B. :** Dans la mesure où les vidéos font parties intégrantes de la
+**N.B. :** Dans la mesure où les vidéos font partie intégrante de la
 documentation, il est recommandé de les publier sous une licence ouverte.
 
 Cette clé est obsolète. Ajoutez plutôt des liens vers les vidéos dans la
@@ -712,7 +712,7 @@ Clé ``maintenance/type``
 
 Cette clé décrit la manière dont le logiciel est maintenu.
 
--  ``internal`` - siginifie que le logiciel est maintenu en interne par le propriétaire du dépôt ;
+-  ``internal`` - signifie que le logiciel est maintenu en interne par le propriétaire du dépôt ;
 -  ``contract`` - signifie qu'il existe un contrat commercial liant une entité à la maintenance du logiciel ;
 -  ``community`` - signifie que le logiciel est actuellement maintenu par une ou plusieurs personnes qui donnent de leur temps au projet ;
 -  ``none`` - signifie que le logiciel n'est pas maintenu de façon active.
@@ -733,9 +733,9 @@ Clé ``maintenance/contacts``
 
 Un ou plusieurs contacts assurant la maintenance du logiciel. 
 
-Cette clé décrit les personnes techniques responsable de la maintenance du logiciel. Chaque contact doit être une personne physique et non une entreprise ou une organisation. Si un contact agit comme représentant d'une institution, ce rapport doit être explicité à l'aide de la clé ``affiliation`` du contact (voir ci-dessous).
+Cette clé décrit les personnes techniques responsables de la maintenance du logiciel. Chaque contact doit être une personne physique et non une entreprise ou une organisation. Si un contact agit comme représentant d'une institution, ce rapport doit être explicité à l'aide de la clé ``affiliation`` du contact (voir ci-dessous).
 
-Dans le cas d'un accord commercial (ou d'une série d'accords semblables), il est nécessaire de spécifier les entités finales sous contrat, en charge de la maintenance du logiciel. Ne mentionné pas le propriétaire du logiciel, sauf s'il est techniquement impliqué dans la maintenance du produit. 
+Dans le cas d'un accord commercial (ou d'une série d'accords semblables), il est nécessaire de spécifier les entités finales sous contrat, en charge de la maintenance du logiciel. Ne mentionnez pas le propriétaire du logiciel, sauf s'il est techniquement impliqué dans la maintenance du produit. 
 
 Section ``localisation``
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -766,7 +766,7 @@ Section ``dependsOn``
 
 Cette section fournit un aperçu des dépendances requises à l'échelle du système, pour installer et utiliser le logiciel. 
 
-**NOTE:** elle ne liste pas les dépendances à l'échelle du code source (ex. bibliothèques utlisées par le logiciel) et se concentre uniquement sur les dépendances de relative au fonctionnement et/ou au système qui doivent être installées et maintenues séparément; par exemple, une base de données.
+**NOTE:** elle ne liste pas les dépendances à l'échelle du code source (ex. bibliothèques utilisées par le logiciel) et se concentre uniquement sur les dépendances relatives au fonctionnement et/ou au système qui doivent être installées et maintenues séparément; par exemple, une base de données.
 
 Clé ``dependsOn/open`` (*obsolète*)
 '''''''''''''''''''''''''''''''''''
@@ -862,7 +862,7 @@ Prestataire
 Un Contractor (prestataire) est un mapping comportant les propriétés suivantes :
 
 -  ``name`` - **obligatoire** - Le nom du prestataire, qu'il s'agisse d'une entreprise ou d'une personne physique.
--  ``until`` - **obligatoire** - Il s'agit d'une date (YYYY-MM-DD). Cette clé doit contenir la date à laquelle la maintenance prendra fin. Dans le cas où la maintenance serait réalisée par une communauté, la valeur ne doit pas excéder une période de deux ans, et devra donc être régulièrement mise si la communauté continue à travailler sur le projet. 
+-  ``until`` - **obligatoire** - Il s'agit d'une date (YYYY-MM-DD). Cette clé doit contenir la date à laquelle la maintenance prendra fin. Dans le cas où la maintenance serait réalisée par une communauté, la valeur ne doit pas excéder une période de deux ans, et devra donc être régulièrement mise à jour si la communauté continue à travailler sur le projet. 
 -  ``email`` -  Cette clé contient l'adresse e-mail du contact technique. Il s'agit de l'adresse e-mail à laquelle le contact technique peut être directement contacté ; NE PAS remplir cette clé avec une liste de diffusion ou des points de contact génériques tels que “info@acme.inc”.
 -  ``website`` - Cette clé pointe vers l'entité maintenant le site web. Elle peut pointer vers le site web principal d'une institution ou bien vers un site web ou une page plus spécifique au projet. 
 
@@ -870,7 +870,7 @@ Dates
 ~~~~~
 
 Toutes les dates dans ``publiccode.yml`` doivent respecter le format “YYYY-MM-DD”,
-qui est l'un des codages autorisé par l'ISO8601. Il s'agit de l'unique codage autorisé. Par conséquent, l'ISO8601 complet n'est pas autorisé pour les clés relatives aux dates.
+qui est l'un des codages autorisés par l'ISO8601. Il s'agit de l'unique codage autorisé. Par conséquent, l'ISO8601 complet n'est pas autorisé pour les clés relatives aux dates.
 
 Encodage
 ~~~~~~~~
