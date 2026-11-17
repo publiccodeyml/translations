@@ -5,6 +5,20 @@ Le standard (coeur)
 
 Ce document détaille le schéma ``publiccode.yml``.
 
+Les mots clés MUST, MUST NOT, REQUIRED, SHOULD, SHOULD NOT,
+RECOMMENDED, MAY et OPTIONAL dans ce document doivent être interprétés
+comme décrit dans BCP 14 (`RFC 2119 <https://www.rfc-editor.org/rfc/rfc2119>`__,
+`RFC 8174 <https://www.rfc-editor.org/rfc/rfc8174>`__) uniquement lorsqu'ils
+sont entièrement en majuscules. Les termes français correspondants
+DOIT, NE DOIT PAS, OBLIGATOIRE, DEVRAIT, NE DEVRAIT PAS, RECOMMANDÉ,
+PEUT et FACULTATIF ont la même force normative lorsqu'ils sont
+entièrement en majuscules.
+
+Une clé indiquée comme obligatoire DOIT être présente. Dans une section
+facultative, les clés obligatoires DOIVENT être présentes si cette
+section est incluse. Les autres clés sont facultatives, sauf si leur
+description précise une condition.
+
 Une clé NE DOIT PAS avoir une valeur null. Omettre une clé facultative
 si elle n'a pas de valeur. Un fichier NE DOIT PAS contenir de clés
 que cette spécification ne définit pas.

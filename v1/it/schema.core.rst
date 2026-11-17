@@ -6,6 +6,20 @@ Lo standard
 La struttura di un file ``publiccode.yml`` prevede l'esistenza di chiavi
 top-level e sezioni che possono contenere al proprio interno altre chiavi.
 
+Le parole chiave MUST, MUST NOT, REQUIRED, SHOULD, SHOULD NOT,
+RECOMMENDED, MAY e OPTIONAL in questo documento devono essere interpretate
+come descritto in BCP 14 (`RFC 2119 <https://www.rfc-editor.org/rfc/rfc2119>`__,
+`RFC 8174 <https://www.rfc-editor.org/rfc/rfc8174>`__) solo quando sono
+scritte interamente in maiuscolo. I corrispondenti termini italiani
+DEVE, NON DEVE, OBBLIGATORIO, DOVREBBE, NON DOVREBBE, RACCOMANDATO,
+PUÒ e OPZIONALE hanno la stessa forza normativa quando sono scritti
+interamente in maiuscolo.
+
+Una chiave indicata come obbligatoria DEVE essere presente. All'interno
+di una sezione opzionale, le chiavi obbligatorie DEVONO essere presenti
+se si include tale sezione. Le altre chiavi sono opzionali, salvo che
+la loro descrizione specifichi una condizione.
+
 Una chiave NON DEVE avere un valore null. Omettere una chiave opzionale
 se non si ha un valore da assegnarle. Un file NON DEVE contenere chiavi
 che questa specifica non definisce.
