@@ -47,3 +47,14 @@ Par exemple, écrire ``platforms: [web]``.
 Un tableau DOIT contenir au moins un élément et NE DOIT PAS contenir
 de doublons. Omettre une clé facultative s'il n'y a aucun élément
 à lister.
+
+.. _url-type:
+
+URL
+---
+
+Une URL absolue, avec son schéma, par exemple
+``https://example.com/firefax``.
+
+Le schéma DOIT être ``http`` ou ``https``, sauf si la clé en autorise
+d'autres.

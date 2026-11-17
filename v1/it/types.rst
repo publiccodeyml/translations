@@ -45,3 +45,14 @@ un solo elemento. Ad esempio, scrivere ``platforms: [web]``.
 Un array DEVE contenere almeno un elemento e NON DEVE contenere
 duplicati. Omettere una chiave opzionale se non ci sono elementi
 da elencare.
+
+.. _url-type:
+
+URL
+---
+
+Un URL assoluto, incluso lo schema, ad esempio
+``https://example.com/firefax``.
+
+Lo schema DEVE essere ``http`` o ``https``, a meno che la chiave non ne
+consenta altri.
