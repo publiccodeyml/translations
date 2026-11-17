@@ -3,6 +3,20 @@ Der Standard (Kern)
 
 Dieses Dokument beschreibt das publiccode.yml-Schema.
 
+Die Schlüsselwörter MUST, MUST NOT, REQUIRED, SHOULD, SHOULD NOT,
+RECOMMENDED, MAY und OPTIONAL in diesem Dokument sind wie in BCP 14
+(`RFC 2119 <https://www.rfc-editor.org/rfc/rfc2119>`__,
+`RFC 8174 <https://www.rfc-editor.org/rfc/rfc8174>`__) beschrieben zu
+verstehen, jedoch nur, wenn sie vollständig in Großbuchstaben stehen.
+Die entsprechenden deutschen Begriffe MUSS, DARF NICHT, OBLIGATORISCH,
+SOLLTE, SOLLTE NICHT, EMPFOHLEN, DARF und OPTIONAL haben dieselbe
+normative Verbindlichkeit, wenn sie vollständig in Großbuchstaben stehen.
+
+Ein als obligatorisch gekennzeichneter Schlüssel MUSS vorhanden sein.
+Innerhalb eines optionalen Abschnitts MÜSSEN obligatorische Schlüssel
+vorhanden sein, wenn dieser Abschnitt enthalten ist. Andere Schlüssel
+sind optional, sofern ihre Beschreibung keine Bedingung vorgibt.
+
 Ein Schlüssel DARF NICHT den Wert null haben. Optionale Schlüssel ohne
 Wert weglassen. Eine Datei DARF KEINE Schlüssel enthalten, die diese
 Spezifikation nicht definiert.
