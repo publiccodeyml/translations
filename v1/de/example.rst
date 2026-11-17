@@ -8,150 +8,159 @@ Minimal-Konfiguration
 ~~~~~~~~~~~~~~~~~~~~~
 .. code:: yaml
 
-  publiccodeYmlVersion: "0"
-
-  name: Office Suite
-  url: "https://example.com/office-suite.git"
+  publiccodeYmlVersion: "1"
+  name: Firefax
+  url: https://example.com/firefax.git
+  softwareType: standalone/desktop
   platforms:
-    - web
-
-  developmentStatus: development
-
-  softwareType: "standalone/desktop"
-
+    - linux
+    - windows
+    - mac
+  developmentStatus: stable
   description:
     en:
-      shortDescription: >
-        A rather short description which
-        is probably useless
-
+      shortDescription: Send and receive faxes from the desktop
       longDescription: >
-        Very long description of this software, also split
-        on multiple rows. You should note what the software
-        is and why one should need it. We can potentially
-        have many pages of text here.
-
+        Firefax lets you send and receive faxes from a desktop computer
+        without a fax machine. You can search received faxes in an archive,
+        schedule outgoing faxes and track their delivery.
   legal:
     license: AGPL-3.0-or-later
-
   maintenance:
-    type: "community"
-
+    type: community
     contacts:
-      - name: Francesco Rossi
-
-  localisation:
-    localisationReady: true
-    availableLanguages:
-      - en
-
-Ausführlichere Version
-~~~~~~~~~~~~~~~~~~~~~~~
-.. code:: yaml
-
-  publiccodeYmlVersion: "0"
-
-  name: Office Suite
-  applicationSuite: MegaProductivitySuite
-  url: "https://example.com/office-suite.git"
-  landingURL: "https://example.com/office-suite"
-  isBasedOn:
-    - "https://example.com/document-editor.git"
-  softwareVersion: "1.0"
-  releaseDate: "2017-04-15"
-  logo: img/logo.svg
-
-  platforms:
-    - android
-    - ios
-
-  categories:
-    - content-management
-    - office
-
-  roadmap: "https://example.com/office-suite/roadmap"
-
-  developmentStatus: development
-
-  softwareType: "standalone/desktop"
-
-  intendedAudience:
-    scope:
-      - science-and-technology
-    countries:
-      - IT
-      - DE
-
-  description:
-    en:
-      localisedName: Office Suite
-      shortDescription: >
-        This description can have a maximum 150
-        characters long. We should not fill the
-        remaining space with "Lorem Ipsum". End
-
-      longDescription: >
-        Very long description of this software, also split
-        on multiple rows. You should note what the software
-        is and why one should need it.
-        It can also contain some basic Markdown.
-
-      documentation: "https://read.the.documentation/office-suite/v1.0"
-      apiDocumentation: "https://read.the.api.doc/office-suite/v1.0"
-
-      features:
-        - Very important feature
-        - Will run without a problem
-        - Has zero bugs
-        - Solves all the problems of the world
-      screenshots:
-        - img/sshot1.jpg
-        - img/sshot2.jpg
-        - img/sshot3.jpg
-      awards:
-        - 1st Price Software of the year
-
-  legal:
-    license: AGPL-3.0-or-later
-    mainCopyrightOwner: City of Chicago
-
-  maintenance:
-    type: "contract"
-
-    contractors:
-      - name: "Fornitore Privato SPA"
-        email: "dario.bianchi@fornitore.it"
-        website: "https://privatecompany.com"
-        until: "2019-01-01"
-
-    contacts:
-      - name: Francesco Rossi
-        email: "francesco.rossi@comune.reggioemilia.it"
-        affiliation: Comune di Reggio Emilia
-        phone: "+3923113215112"
-
+      - name: Jane Doe
   localisation:
     localisationReady: true
     availableLanguages:
       - en
       - it
       - fr
-      - de
 
-  dependsOn:
-    proprietary:
-      - name: Oracle
-        versionMin: "11.4"
-      - name: IBM SoftLayer
-    hardware:
-      - name: NFC Reader
-        optional: true
+Ausführlichere Version
+~~~~~~~~~~~~~~~~~~~~~~~
+.. code:: yaml
 
-  supports:
-    - id: alias:gdpr
-    - id: alias:eidas
-    - id: https://eur-lex.europa.eu/eli/dir/2016/2102/oj
+  publiccodeYmlVersion: "1"
+
+  name: Firefax
+  url: https://example.com/firefax.git
+  landingURL: https://example.com/firefax
+  softwareType: standalone/desktop
+  platforms:
+    - linux
+    - windows
+    - mac
+  developmentStatus: stable
+  softwareVersion: "2.3"
+  releaseDate: "2026-03-15"
+  logo: img/logo.svg
+  applicationSuite: MegaProductivitySuite
+  isBasedOn:
+    - https://example.com/openfax.git
+  roadmap: https://example.com/firefax/roadmap
+
+  description:
+    en:
+      localisedName: Firefax
+      shortDescription: Send and receive faxes from the desktop
+      longDescription: >
+        Firefax lets you send and receive faxes from a desktop computer
+        without a fax machine. You can search received faxes in an archive,
+        schedule outgoing faxes and track their delivery.
+
+
+        Offices that exchange documents by fax can keep those documents
+        in one archive and replace their fax machines.
+      documentation: https://example.com/firefax/docs
+      apiDocumentation: https://example.com/firefax/api
+      features:
+        - Send and receive faxes without a fax machine
+        - Search the archive of received faxes
+        - Schedule outgoing faxes
+        - Track the delivery of every fax
+        - Sign outgoing faxes digitally
+      screenshots:
+        - img/screenshots/inbox.png
+        - img/screenshots/compose.png
+      videos:
+        - https://www.youtube.com/watch?v=xxxxxxxxxxx
+      awards:
+        - Public Sector Software Award 2025
+    en-GB:
+      shortDescription: Send and receive faxes from your computer
+
+  legal:
+    license: EUPL-1.2 OR AGPL-3.0-or-later
+    mainCopyrightOwner: Example City Council
 
   organisation:
-    uri: urn:x-italian-pa:c_h501
-    name: Roma Capitale
+    uri: https://example.com/organisations/example-city-council
+    name: Example City Council
+
+  maintenance:
+    type: contract
+    contractors:
+      - name: Example Software Ltd
+        until: "2027-12-31"
+        email: firefax-maintenance@supplier.example.com
+        website: https://supplier.example.com
+    contacts:
+      - name: Jane Doe
+        email: jane.doe@supplier.example.com
+        affiliation: Example Software Ltd
+        phone: "+441234567890"
+
+  localisation:
+    localisationReady: true
+    availableLanguages:
+      - en
+      - en-GB
+      - fr
+
+  categories:
+    - communications
+    - document-management
+
+  supports:
+    - id: alias:eidas
+    - id: alias:gdpr
+
+  intendedAudience:
+    countries:
+      - GB
+    unsupportedCountries:
+      - US
+    scope:
+      - local-authorities
+
+  usedBy:
+    - Example City Council
+    - Example County Council
+
+  fundedBy:
+    - name: Example City Council
+      uri: https://example.com/organisations/example-city-council
+
+  dependsOn:
+    open:
+      - name: PostgreSQL
+        version: "16"
+      - name: Ghostscript
+        versionMin: "10.0"
+        versionMax: "10.5"
+        optional: true
+    proprietary:
+      - name: Oracle Database
+        versionMin: "19"
+        versionMax: "23"
+        optional: true
+      - name: Proprietary fax driver
+        version: "3"
+    hardware:
+      - name: Fax modem
+        versionMin: "1"
+        versionMax: "2"
+        optional: true
+      - name: USB fax adapter
+        version: "3"
