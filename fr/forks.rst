@@ -7,7 +7,7 @@ Forks et variantes
 Comme déjà mentionné précédemment, un fork peut avoir deux formes 
 différentes basées sur l'objectif. En tant que tel, afin de bien comprendre
 comment gérer les `publiccode.yml` dans les deux cas, nous définissons ci-dessous deux
-sémantique: forks techniques et variantes logicielles.
+sémantiques: forks techniques et variantes logicielles.
 
 Forks techniques (par exemple pour publier des patchs)
 ------------------------------------------------------
@@ -15,7 +15,7 @@ Forks techniques (par exemple pour publier des patchs)
 Un fork technique est un fork fait par un développeur dans le but de:
 travailler sur la base de code d'origine ou envoyer des améliorations aux
 auteurs originaux, sans objectif explicite de création et de publication
-une variante alternative du logiciel d'origine.
+d'une variante alternative du logiciel d'origine.
 
 Dans le contexte des systèmes de contrôle distribués et plates-formes d’hébergement 
 du code collaboratif comme GitHub, le forking est presque toujours utilisé par
@@ -23,8 +23,8 @@ les développeurs comme une étape pour travailler sur une contribution sur une 
 en envoyant des "pull-request".
 
 En raison de la façon dont le fork fonctionne sur GitHub et d’autres plateformes,
-les développeurs publient leurs forks comme des copies parfaites de l'original
-logiciel, incluant donc aussi ``publiccode.yml``. Cependant, les analyseurs ont besoin
+les développeurs publient leurs forks comme des copies parfaites du logiciel
+original, incluant donc aussi ``publiccode.yml``. Cependant, les analyseurs ont besoin
 d'être capables de distinguer ces forks techniques de la code base originale.
 
 Analyseurs
