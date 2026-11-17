@@ -103,7 +103,7 @@ Gli autori che vogliano pubblicare un fork come una variante
    upstream dai quali questa variante deriva.
 -  Cambiare il valore di ``url`` per farla puntare al repository che
    ospita la variante.
--  Cambiare il valore di ``legal/repoOwner`` per identificarsi come
+-  Cambiare il valore di ``organisation/name`` per identificarsi come
    autori della variante.
 -  Rivisitare la sezione denominata ``maintenance`` per aggiornare lo
    stato di manutenzione della variante.

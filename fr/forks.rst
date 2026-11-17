@@ -101,7 +101,7 @@ au minimum :
    amont dont cette variante est dérivée.
 -  Modifier la valeur de ``url`` pour pointer vers le dépôt contenant la
    variante.
--  Modifier la valeur de ``legal/repoOwner`` pour se désigner eux-mêmes
+-  Modifier la valeur de ``organisation/name`` pour se désigner eux-mêmes
    (les auteurs de la variante).
 -  Réexaminer la section ``maintenance`` pour indiquer l'état de
    maintenance de la variante.

@@ -55,7 +55,7 @@ Autoren, die bereit sind, einen Fork als Variante zu veröffentlichen, **MÜSSEN
 
 - den Wert für ``url`` so ändern, dass er auf das Repository verweist, das die Variante enthält.
 
-- den Wert für ``legal/repoOwner`` ändern, um auf sich selbst (die Autoren der Variante) zu verweisen. 
+- den Wert für ``organisation/name`` ändern, um auf sich selbst (die Autoren der Variante) zu verweisen.
 
 - auf den ``maintenance``-Abschnitt zurückkommen, um auf den Maintenance-Status der Variante zu verweisen.
 
