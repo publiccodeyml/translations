@@ -27,7 +27,7 @@ Top-Level Keys and Sections
 Key ``publiccodeYmlVersion``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Typ: enumerierte Zeichenkette
+-  Typ: :ref:`enumerierte Zeichenkette <enumerated-string-type>`
 -  Vorhandensein: obligatorisch
 -  Beispiel: ``"1"``
 
@@ -217,7 +217,7 @@ A link to a public roadmap of the software.
 Key ``developmentStatus``
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Typ: enumerierte Zeichenkette
+-  Typ: :ref:`enumerierte Zeichenkette <enumerated-string-type>`
 -  Vorhandensein: obligatorisch
 -  Zulässige Werte: ``concept``, ``development``, ``beta``, ``stable``,
    ``obsolete``
@@ -241,7 +241,7 @@ Die zulässigen Werte sind:
 Key ``softwareType``
 ~~~~~~~~~~~~~~~~~~~~
 
--  Typ: enumerierte Zeichenkette
+-  Typ: :ref:`enumerierte Zeichenkette <enumerated-string-type>`
 -  Vorhandensein: obligatorisch
 -  Zulässige Werte: ``"standalone/mobile"``, ``"standalone/iot"``,
    ``"standalone/desktop"``, ``"standalone/web"``, ``"standalone/backend"``,
@@ -617,7 +617,7 @@ or not.
 Key ``maintenance/type``
 ''''''''''''''''''''''''
 
--  Typ: Aufzählung
+-  Typ: :ref:`enumerierte Zeichenkette <enumerated-string-type>`
 -  Vorhandensein: obligatorisch
 -  Werte: ``"internal"``, ``"contract"``, ``"community"``, ``"none"``
 

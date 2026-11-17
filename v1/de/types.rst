@@ -29,6 +29,17 @@ oder als ``e`` gefolgt von einem kombinierenden Akzent gespeichert ist.
 Der Wert MUSS eine YAML-Zeichenkette sein: Eine Zahl, ein boolescher
 Wert oder null ist ein Fehler.
 
+.. _enumerated-string-type:
+
+Enumerierte Zeichenkette
+------------------------
+
+Eine Zeichenkette, die einen der für ihren Schlüssel aufgelisteten
+Werte annimmt.
+
+Bei den Werten wird zwischen Groß- und Kleinschreibung unterschieden:
+Sie sind genau wie aufgelistet zu schreiben.
+
 .. _array-type:
 
 Array

@@ -30,6 +30,16 @@ comme ``e`` suivi d'un accent combinant.
 La valeur DOIT être une chaîne YAML : un nombre, un booléen ou null
 est une erreur.
 
+.. _enumerated-string-type:
+
+Chaîne énumérée
+---------------
+
+Une chaîne prenant une des valeurs énumérées pour sa clé.
+
+Les valeurs sont sensibles à la casse : les écrire exactement comme
+dans la liste.
+
 .. _array-type:
 
 Tableau

@@ -29,7 +29,7 @@ Clés de haut niveau et Sections
 Clé ``publiccodeYmlVersion``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Type: chaîne de caractères énumérée
+-  Type: :ref:`chaîne énumérée <enumerated-string-type>`
 -  Présence: obligatoire
 -  Exemple: ``"1"``
 
@@ -225,7 +225,7 @@ Un lien vers une *roadmap* publique du logiciel.
 Clé ``developmentStatus``
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Type: chaîne de caractères énumérée
+-  Type: :ref:`chaîne énumérée <enumerated-string-type>`
 -  Présence: obligatoire
 -  Valeurs autorisées: ``concept``, ``development``, ``beta``, ``stable``,
    ``obsolete``
@@ -248,7 +248,7 @@ Les valeurs autorisées sont:
 Clé ``softwareType``
 ~~~~~~~~~~~~~~~~~~~~
 
--  Type: chaîne de caractères énumérée
+-  Type: :ref:`chaîne énumérée <enumerated-string-type>`
 -  Présence: obligatoire
 -  Valeurs autorisées: ``"standalone/mobile"``, ``"standalone/iot"``,
    ``"standalone/desktop"``, ``"standalone/web"``, ``"standalone/backend"``,
@@ -634,7 +634,7 @@ Cette section contient des informations sur l'état de maintenance du logiciel, 
 Clé ``maintenance/type``
 ''''''''''''''''''''''''
 
--  Type: enumerate
+-  Type: :ref:`chaîne énumérée <enumerated-string-type>`
 -  Présence: obligatoire
 -  Valeurs: ``"internal"``, ``"contract"``, ``"community"``, ``"none"``
 
