@@ -71,9 +71,9 @@ potrebbero giovare ad altre persone.
 Contrassegnare un fork come una variante **non** pregiudica la volontà
 di contribuire upstream; l’autore potrebbe comunque voler contribuire
 upstream o essere in attesa di farlo. Perciò, anche se il fork alla fine
-verrà inclusa (merge) upstream, potrebbe aver senso contrassegnarla come
+verrà incluso (merge) upstream, potrebbe aver senso contrassegnarlo come
 una variante durante queste fasi di lavoro intermedie, in modo tale che
-anche altri possano trovarla e beneficiarne.
+anche altri possano trovarlo e beneficiarne.
 
 .. _parser-1:
 

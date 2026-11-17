@@ -149,7 +149,7 @@ Chiave ``platforms``
 
 Questa chiave specifica su quale piattaforma funziona il software. È
 pensata per descrivere le piattaforme che l’utente userà per accedere ed
-utilizzare il software, piuttosto che la piattaforma sul quale il
+utilizzare il software, piuttosto che la piattaforma sulla quale il
 software gira.
 
 Se possibile, usare i valori predefiniti. Se il software gira su una
@@ -175,7 +175,7 @@ Chiave ``usedBy`` (*deprecata*)
 -  Tipo: lista di stringhe
 -  Presenza: opzionale
 
-Una lista di nome di prominenti Pubbliche Amministrazioni (che
+Una lista di nomi di prominenti Pubbliche Amministrazioni (che
 serviranno come “testimonial”) che il maintainer riconosce come
 utilizzatori attuali di questo software.
 
@@ -439,7 +439,7 @@ Questa chiave contiene una descrizione più lunga del software, con una
 lunghezza che può variare da 150 a 10000 caratteri. Questa chiave è
 pensata per fornire una panoramica delle caratteristiche del software
 per un potenziale utente. Il destinatario di questo testo dovrebbe
-essere l’utente finale, non nello sviluppatore. E’ possibile pensare a
+essere l’utente finale, non lo sviluppatore. E’ possibile pensare a
 questo testo come alla descrizione del software che potrebbe stare nel
 sito web (nel caso in cui il software ne possieda uno).
 
@@ -455,7 +455,7 @@ Chiave ``description/[lang]/documentation``
 -  Presenza: opzionale
 
 Questa chiave contiene un riferimento alla documentazione lato utente
-(non lato sviluppatore) Questo valore deve essere una URL che punta ad
+(non lato sviluppatore). Questo valore deve essere una URL che punta ad
 una versione ospitata della documentazione.
 
 È suggerito che questa URL punti ad una versione ospitata della
@@ -833,7 +833,7 @@ Un Contractor è un mapping con le seguenti proprietà:
    chiave deve contenere una data alla quale la manutenzione finirà. Nel
    caso di manutenzione gestita dalla community, questo valore non deve
    essere maggiore di 2 anni nel futuro, e quindi deve essere
-   regolarmente aggiornata man mano che la community continua a lavorare
+   regolarmente aggiornato man mano che la community continua a lavorare
    al progetto.
 -  ``email`` - Questa chiave contiene l’indirizzo email del contatto
    tecnico. Deve essere un indirizzo email per il contatto diretto con
@@ -841,7 +841,7 @@ Un Contractor è un mapping con le seguenti proprietà:
    contatto generico tipo “info@acme.inc”.
 -  ``website`` - Questa chiave punta al sito del maintainer. Può puntare
    al principale sito istituzionale, o ad una pagina o sito più
-   specifica.
+   specifico.
 
 Data
 ~~~~
