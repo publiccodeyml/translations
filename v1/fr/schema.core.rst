@@ -737,7 +737,9 @@ Une ``dependency`` est un mapping comportant les propriétés suivantes :
    NFC Reader) ;
 -  ``versionMin`` - la version compatible la plus ancienne ;
 -  ``versionMax`` - la version compatible la plus récente ;
--  ``version`` - la version principale avec laquelle le logiciel est compatible. Cela suppose une compatibilité avec l'ensemble des correctifs et des corrections de bogues appliqués ultérieurement à cette version ;
+-  ``version`` - la version principale avec laquelle le logiciel est compatible. Cela suppose une compatibilité avec l'ensemble des correctifs et des corrections de bogues appliqués ultérieurement à cette version.
+   La clé NE DOIT PAS être présente en même temps que ``versionMin`` ou
+   ``versionMax`` ;
 -  ``optional`` - booléen : si ``true``, le logiciel fonctionne aussi sans
    la dépendance. La valeur par défaut est ``false``.
 

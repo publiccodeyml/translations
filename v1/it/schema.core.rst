@@ -779,7 +779,9 @@ Una ``dependency`` è un mapping con le seguenti proprietà:
 -  ``versionMax`` - l’ultima versione compatibile;
 -  ``version`` - l’unica versione major con la quale il software è
    compatibile. Si assume la compatibilità con tutte le *patch* e i
-   *bugfix* che saranno applicati successivamente a questa versione;
+   *bugfix* che saranno applicati successivamente a questa versione.
+   La chiave NON DEVE essere presente insieme a ``versionMin`` o
+   ``versionMax``;
 -  ``optional`` - booleano: se ``true``, il software funziona anche senza
    la dipendenza. Il valore predefinito è ``false``.
 
