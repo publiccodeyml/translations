@@ -61,4 +61,4 @@ Autoren, die bereit sind, einen Fork als Variante zu veröffentlichen, **MÜSSEN
 
 Außerdem **SOLLTEN** die Autoren die folgenden Änderungen evaluieren: 
 
-- Merkmale, die die Variante vom ``description/[lang]/features``-Key unterscheiden. Bestehende Merkmale **SOLLTEN NICHT** bearbeitet oder aus dieser Liste entfernt werden, es sei denn, sie wurden aus der Variante entfernt, um Parsern einen einfachen Vergleich von Merkmalslisten zu ermöglichen.
+- Die Merkmale, die die Variante unterscheiden, zum Key ``description/[lang]/features`` hinzufügen. Bestehende Merkmale **SOLLTEN NICHT** bearbeitet oder aus dieser Liste entfernt werden, es sei denn, sie wurden aus der Variante entfernt, um Parsern einen einfachen Vergleich von Merkmalslisten zu ermöglichen.
