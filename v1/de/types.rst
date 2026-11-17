@@ -45,3 +45,14 @@ enthalten. Zum Beispiel: ``platforms: [web]``.
 Ein Array MUSS mindestens ein Element enthalten und DARF KEINE
 Duplikate enthalten. Ein optionaler Schlüssel ist wegzulassen, wenn
 keine Elemente aufzulisten sind.
+
+.. _url-type:
+
+URL
+---
+
+Eine absolute URL einschließlich Schema, zum Beispiel
+``https://example.com/firefax``.
+
+Das Schema MUSS ``http`` oder ``https`` sein, sofern der Schlüssel keine
+anderen erlaubt.
