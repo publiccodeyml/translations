@@ -1,7 +1,7 @@
 .. _forks-and-variants:
 
-3. Forks und Varianten
-========================
+Forks und Varianten
+===================
 
 Wie bereits erwähnt, kann ein Fork zwei verschiedene Formen haben, abhängig von dem letztlichen Ziel. Um zu verdeutlichen, wie die ``publiccode.yml`` in beiden Fällen zu behandeln ist, definieren wir im Folgenden zwei verschiedene Semantiken: technische Forks und Software-Varianten.
 

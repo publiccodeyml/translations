@@ -1,3 +1,6 @@
+``publiccode.yml``
+==================
+
 publiccode.yml ist ein Metadaten-Standard für Repositories, die von der öffentlichen Verwaltung entwickelte oder erworbene Software enthalten, mit dem Ziel, diese leicht auffindbar und damit für andere Stellen wiederverwendbar zu machen.
 
 Indem man eine publiccode.yml-Datei in das Stammverzeichnis eines Repositories aufnimmt und sie mit Informationen über die Software füllt, können Techniker und Beamte diese auswerten.
