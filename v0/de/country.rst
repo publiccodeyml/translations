@@ -19,4 +19,4 @@ Jede Sektion wird durch einen Ländercode aus zwei Kleinbuchstaben
 
 Derzeit ist nur die italienische länderspezifische Sektion (``IT:``) definiert.
 
-.. include:: ../standard/schema.it.rst
+.. include:: schema.it.rst
