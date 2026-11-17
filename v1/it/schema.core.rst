@@ -12,12 +12,11 @@ Chiavi e Sezioni Top-Level
 Chiave ``publiccodeYmlVersion``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Tipo: stringa
+-  Tipo: stringa enumerata
 -  Presenza: obbligatoria
--  Esempio: ``"0"``
+-  Esempio: ``"1"``
 
-Questa chiave specifica la versione alla quale il presente
-``publiccode.yml`` aderisce, per una questione di compatibilità diretta.
+La versione della specifica a cui aderisce il file: ``"1"``.
 
 Chiave ``name``
 ~~~~~~~~~~~~~~~

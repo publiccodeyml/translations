@@ -9,12 +9,11 @@ Top-Level Keys and Sections
 Key ``publiccodeYmlVersion``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Typ: Zeichenkette
+-  Typ: enumerierte Zeichenkette
 -  Vorhandensein: obligatorisch
--  Beispiel: ``"0"``
+-  Beispiel: ``"1"``
 
-This key specifies the version to which the current ``publiccode.yml``
-adheres, for forward compatibility.
+Die Version der Spezifikation, der die Datei entspricht: ``"1"``.
 
 Key ``name``
 ~~~~~~~~~~~~
