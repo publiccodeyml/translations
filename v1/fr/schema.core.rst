@@ -405,7 +405,7 @@ dans cette section sont visibles par l’utilisateur et écrites dans une
 langue donnée, il est **nécessaire** d’indiquer la langue avec laquelle le
 texte est édité. Pour ce faire, il est nécessaire de créer une section
 dédiée à la langue, conformément aux spécifications de la
-`BCP 47 <https://www.rfc-editor.org/info/bcp47/>`__ de l’IETF.
+BCP 47 de l'IETF avec une :ref:`balise de langue <language-tag-type>`.
 Veuillez noter que l'étiquette *primary language subtag* ne doit pas être
 omise, comme indiquée dans la BCP 47.
 
@@ -682,7 +682,7 @@ multilingue. Le logiciel n'a pas besoin d'être disponible dans plusieurs langue
 Clé ``localisation/availableLanguages``
 '''''''''''''''''''''''''''''''''''''''
 
--  Type: liste des balises de langue de la BCP 47 de l'IETF
+-  Type: liste de :ref:`balises de langue <language-tag-type>` de la BCP 47 de l'IETF
 -  Présence: obligatoire
 -  Exemple: ``"it"``, ``"en"``, ``"sl-IT-nedis"``
 

@@ -406,7 +406,7 @@ descriva il software.
 visibili all’utente e scritte in un linguaggio specifico, è
 **necessario** specificare il linguaggio con il quale si sta modificando
 il testo. Per farlo è necessario creare una sezione dedicata alla lingua
-seguendo le specifiche IETF `BCP 47 <https://www.rfc-editor.org/info/bcp47/>`__. Si
+usando un :ref:`tag di lingua <language-tag-type>` secondo le specifiche IETF BCP 47. Si
 ricorda che il *primary language
 subtag* non può essere omesso, come specificato nel BCP 47. 
 
@@ -712,7 +712,7 @@ disponibili si veda la chiave ``localisation/availableLanguages``.
 Chiave ``localisation/availableLanguages``
 ''''''''''''''''''''''''''''''''''''''''''
 
--  Tipo: lista di *language tag* secondo le specifiche IETF BCP 47
+-  Tipo: lista di :ref:`tag di lingua <language-tag-type>` secondo le specifiche IETF BCP 47
 -  Presenza: obbligatoria
 -  Esempio: ``"it"``, ``"en"``, ``"sl-IT-nedis"``
 
