@@ -733,7 +733,8 @@ A ``dependency`` is a mapping with the following properties:
 -  ``version`` - the only major version for which the software is
    compatible. It assumes compatibility with all patches and bugfixes
    later applied to this version.
--  ``optional`` - whether the dependency is optional or mandatory
+-  ``optional`` - boolescher Wert: Bei ``true`` funktioniert die Software
+   auch ohne die Abhängigkeit. Der Standardwert ist ``false``.
 
 Complex versioning
 ~~~~~~~~~~~~~~~~~~
