@@ -5,6 +5,10 @@ Le standard (coeur)
 
 Ce document détaille le schéma ``publiccode.yml``.
 
+Une clé NE DOIT PAS avoir une valeur null. Omettre une clé facultative
+si elle n'a pas de valeur. Un fichier NE DOIT PAS contenir de clés
+que cette spécification ne définit pas.
+
 Clés de haut niveau et Sections
 -------------------------------
 

@@ -3,6 +3,10 @@ Der Standard (Kern)
 
 Dieses Dokument beschreibt das publiccode.yml-Schema.
 
+Ein Schlüssel DARF NICHT den Wert null haben. Optionale Schlüssel ohne
+Wert weglassen. Eine Datei DARF KEINE Schlüssel enthalten, die diese
+Spezifikation nicht definiert.
+
 Top-Level Keys and Sections
 ---------------------------
 
