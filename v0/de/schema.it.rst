@@ -149,9 +149,9 @@ inside the reuse catalog of `Developers Italia <https://developers.italia.it>`__
 Key ``riuso/codiceIPA`` (*veraltet*)
 ''''''''''''''''''''''''''''''''''''
 
--  Type: string (iPA code) 
--  Presence: mandatory if ``repoOwner`` is a Public Administration 
--  Example: ``c_h501``
+- Typ: string (iPA code)
+- Vorhandensein: mandatory if ``repoOwner`` is a Public Administration
+- Beispiel: ``c_h501``
 
 This key represents the administration code inside the Public Administration
 index (codice IPA).
