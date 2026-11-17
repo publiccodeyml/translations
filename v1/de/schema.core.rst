@@ -772,7 +772,7 @@ Ein Kontakt ist ein Mapping mit den folgenden Eigenschaften:
    vollständigen Namen eines der technischen Kontakte. Es muss sich um
    eine reale Person handeln. Tragen Sie hier KEINE allgemeinen
    Kontaktinformationen, Unternehmensabteilungen, Vereine usw. ein.
--  ``email`` - Dieser Schlüssel enthält die E-Mail-Adresse des
+-  ``email`` - :ref:`E-Mail-Adresse <email-type>` - Dieser Schlüssel enthält die E-Mail-Adresse des
    technischen Kontakts. Es muss eine E-Mail-Adresse sein, unter der der
    technische Kontakt direkt erreichbar ist. Tragen Sie hier KEINE
    Mailinglisten oder allgemeinen Kontaktadressen wie „info@acme.inc“
@@ -811,7 +811,7 @@ A Contractor is a mapping with the following properties:
    case of community maintenance, the value should not be more than 2
    years in the future, and thus will need to be regularly updated as
    the community continues working on the project.
--  ``email`` - This key contains the e-mail address of the technical
+-  ``email`` - :ref:`E-Mail-Adresse <email-type>` - This key contains the e-mail address of the technical
    contact. It must be an email address of where the technical contact
    can be directly reached; do NOT populate this key with mailing-lists
    or generic contact points like “info@acme.inc”.

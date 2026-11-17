@@ -805,7 +805,7 @@ Un Contatto è un mapping con le seguenti proprietà:
    di uno dei contatti tecnici. Deve essere una persona reale; NON
    popolare questa chiave con informazioni di contatto generiche,
    dipartimenti dell’azienda, associazioni, etc.
--  ``email`` - Questa chiave contiene l’indirizzo email del contatto
+-  ``email`` - :ref:`indirizzo e-mail <email-type>` - Questa chiave contiene l’indirizzo email del contatto
    tecnico. Deve essere un indirizzo email per il contatto diretto con
    il tecnico; NON popolare questa chiave con mailing-list o punti di
    contatto generico tipo “info@acme.inc”.
@@ -843,7 +843,7 @@ Un Contractor è un mapping con le seguenti proprietà:
    essere maggiore di 2 anni nel futuro, e quindi deve essere
    regolarmente aggiornato man mano che la community continua a lavorare
    al progetto.
--  ``email`` - Questa chiave contiene l’indirizzo email del contatto
+-  ``email`` - :ref:`indirizzo e-mail <email-type>` - Questa chiave contiene l’indirizzo email del contatto
    tecnico. Deve essere un indirizzo email per il contatto diretto con
    il tecnico; NON popolare questa chiave con mailing-list o punti di
    contatto generico tipo “info@acme.inc”.
