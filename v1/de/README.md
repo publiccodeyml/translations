@@ -34,7 +34,7 @@ Die Publiccode.yml-Datei soll diese Probleme lösen. Daher handelt es sich um ei
 
 * Den Titel und die Beschreibung des Projekts oder Produkts auf Englisch und/oder anderen Sprachen;
 
-* Den Entwicklungsstatus, z. B. Konzept, In Entwicklung, Beta, Stabil, Veraltet;
+* Den Entwicklungsstatus, z. B. `concept`, `development`, `beta`, `stable`, `obsolete`;
 
 * Wer sich um die Wartung kümmert und bis wann;
 
