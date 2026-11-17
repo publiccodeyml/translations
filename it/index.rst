@@ -43,7 +43,6 @@ Indice dei contenuti
 
 .. toctree:: 
    :maxdepth: 2
-   :numbered:
 
    schema.core.rst
    forks.rst
