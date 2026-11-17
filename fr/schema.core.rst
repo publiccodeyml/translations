@@ -60,7 +60,7 @@ fourches techniques. Au contraire, une fourche complète, destinée à être mai
 séparément du logiciel d’origine, doit modifier cette ligne pour être traitée
 comme variante distincte.
 
-Voir: ref:`fourches-et-variantes` pour une description complète de ce qu’est une
+Voir :ref:`forks-and-variants` pour une description complète de ce qu’est une
 variante de logiciel et de comment prendre en charge les logiciels fourchés du côté
 des programmes d'analyse syntaxique et des auteurs.
 

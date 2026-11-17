@@ -502,6 +502,7 @@ sorgente e dunque gestirla tramite commit sul repository del codice
 sorgente. In questo modo, sarà possibile fornire una URL diretta alla
 piattaforma di hosting del codice (ad es., GitHub URL al file). E’
 preferibile utilizzare formati aperti quali PDF o ODT per avere la
+massima interoperabilità.
 
 Qualunque sia il formato della documentazione, è importante ricordare di
 rilasciarne i sorgenti coperti da licenza aperta, possibilmente
