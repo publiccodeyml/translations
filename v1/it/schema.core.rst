@@ -6,6 +6,10 @@ Lo standard
 La struttura di un file ``publiccode.yml`` prevede l'esistenza di chiavi
 top-level e sezioni che possono contenere al proprio interno altre chiavi.
 
+Una chiave NON DEVE avere un valore null. Omettere una chiave opzionale
+se non si ha un valore da assegnarle. Un file NON DEVE contenere chiavi
+che questa specifica non definisce.
+
 Chiavi e Sezioni Top-Level
 --------------------------
 
