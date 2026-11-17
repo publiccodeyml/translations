@@ -1,7 +1,7 @@
 Esempi
 ==========================
 
-Qui di seguito vi sono due esempi di file `publiccode.yml`, il primo
+Qui di seguito vi sono due esempi di file ``publiccode.yml``, il primo
 rappresenta la configurazione minima, ovvero contiene i campi obbligatori,
 mentre il secondo è più esteso.
 

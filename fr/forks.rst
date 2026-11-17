@@ -6,7 +6,7 @@ Forks et variantes
 
 Comme déjà mentionné précédemment, un fork peut avoir deux formes 
 différentes basées sur l'objectif. En tant que tel, afin de bien comprendre
-comment gérer les `publiccode.yml` dans les deux cas, nous définissons ci-dessous deux
+comment gérer les ``publiccode.yml`` dans les deux cas, nous définissons ci-dessous deux
 sémantiques: forks techniques et variantes logicielles.
 
 Forks techniques (par exemple pour publier des patchs)
