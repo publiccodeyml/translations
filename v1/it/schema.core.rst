@@ -125,11 +125,10 @@ Chiave ``softwareVersion``
 -  Presenza: opzionale
 -  Esempio: ``"1.0"``, ``"dev"``
 
-Questa chiave contiene il numero dell’ultima versione stabile del
-software. Il numero di versione è una stringa che non è pensata per
-essere interpretata dal parser ma solamente visualizzata; i parser non
-devono assumere l’utilizzo del semantic versioning o altri specifici
-formati di versionamento.
+Questa chiave contiene il numero dell'ultima versione stabile del software.
+I parser DOVREBBERO visualizzare questa stringa senza interpretarla o
+analizzarla. NON DOVREBBERO presumere l'uso del semantic versioning o
+di qualsiasi altro formato di versionamento.
 
 Chiave ``releaseDate``
 ~~~~~~~~~~~~~~~~~~~~~~

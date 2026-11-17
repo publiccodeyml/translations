@@ -121,10 +121,9 @@ Clé ``softwareVersion``
 -  Exemple: ``"1.0"``, ``"dev"``
 
 Cette clé contient le numéro de la dernière version stable du logiciel.
-Le numéro de la version est une chaîne de caractères qui n’est pas destinée
-à être interprétée et parsée mais seulement affichée ; les programmes d'analyse
-syntaxique ne doivent pas s'appuyer sur une gestion sémantique des versions ou
-tout autre format de gestion spécifique de version.
+Les programmes d'analyse syntaxique DEVRAIENT afficher cette chaîne sans
+l'interpréter ni l'analyser. Ils NE DEVRAIENT PAS supposer l'utilisation
+du versionnement sémantique ou de tout autre format de version.
 
 Clé ``releaseDate``
 ~~~~~~~~~~~~~~~~~~~
