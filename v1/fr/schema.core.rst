@@ -139,12 +139,17 @@ fichier ``publiccode.yml``.
 Clé ``platforms``
 ~~~~~~~~~~~~~~~~~
 
--  Type: chaîne de caractères énumérée ou liste de chaînes de caractères
+-  Type: liste de chaînes de caractères
 -  Présence: obligatoire
 -  Valeurs: ``web``, ``windows``, ``mac``, ``linux``, ``ios``,
    ``android``. Les valeurs lisibles par des humains qui ne sont pas incluses
    dans cette liste sont autorisées.
--  Exemple: ``web``
+
+.. code-block:: yaml
+   :caption: Exemple
+
+   platforms:
+     - web
 
 Cette clé spécifie sur quelle plateforme le logiciel fonctionne.
 Plutôt que de décrire la plateforme sur laquelle le logiciel s'exécute,

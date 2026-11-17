@@ -143,12 +143,17 @@ dovrebbe essere in formato vettoriale.
 Chiave ``platforms``
 ~~~~~~~~~~~~~~~~~~~~
 
--  Tipo: stringa enumerata o lista di stringhe
+-  Tipo: lista di stringhe
 -  Presenza: obbligatoria
 -  Valori: ``web``, ``windows``, ``mac``, ``linux``, ``ios``,
    ``android``. Valori leggibili da un umano al di fuori di questa lista
    sono permessi.
--  Esempio: ``web``
+
+.. code-block:: yaml
+   :caption: Esempio
+
+   platforms:
+     - web
 
 Questa chiave specifica su quale piattaforma funziona il software. È
 pensata per descrivere le piattaforme che l’utente userà per accedere ed

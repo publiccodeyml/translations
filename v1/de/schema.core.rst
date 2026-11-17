@@ -136,11 +136,16 @@ the ``publiccode.yml`` file is stored.
 Key ``platforms``
 ~~~~~~~~~~~~~~~~~
 
--  Typ: enumerierte Zeichenkette oder Liste von Zeichenketten
+-  Typ: Liste von Zeichenketten
 -  Vorhandensein: obligatorisch
 -  Werte: ``web``, ``windows``, ``mac``, ``linux``, ``ios``,
    ``android``. Human readable values outside this list are allowed.
--  Beispiel: ``web``
+
+.. code-block:: yaml
+   :caption: Beispiel
+
+   platforms:
+     - web
 
 This key specifies which platform the software runs on. It is meant to
 describe the platforms that users will use to access and operate the
