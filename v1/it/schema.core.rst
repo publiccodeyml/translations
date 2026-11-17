@@ -849,10 +849,11 @@ Un Contractor è un mapping con le seguenti proprietà:
 Data
 ~~~~
 
-Tutte le date in ``publiccode.yml`` devono aderire al formato
-“YYYY-MM-DD” che è uno dei formati permessi da ISO8601. **Nota
-bene:** questo è l’unico formato permesso, quindi non sono consentiti
-gli altri formati previsti da ISO8601.
+Una data di calendario nel formato ISO 8601 ``YYYY-MM-DD``, l'unico
+formato ISO 8601 consentito. Racchiuderla tra virgolette in YAML,
+come in ``"2017-04-15"``, affinché rimanga una stringa.
+
+La data DEVE esistere nel calendario: ``"2023-02-30"`` non è una data.
 
 Codifica
 ~~~~~~~~
