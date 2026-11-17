@@ -276,11 +276,8 @@ I valori ammessi sono:
    (e.g., un CMS o una suite per ufficio). 
 -  ``library`` - Il software è una libreria o un SDK destinato all'uso
    da parte di sviluppatori in altri progetti software.
--  ``configurationFiles`` - Il software non contiene script eseguibili ma
-   una serie di file di configurazione. Questi potrebbero documentare come
-   ottenere un certo tipo di *deployment*. I suddetti file potrebbero avere la
-   forma di semplici file di configurazione, script bash, playbook ansible,
-   Dockerfile, o altri set di istruzioni.
+-  ``configurationFiles`` - File di configurazione o script per un
+   deployment, come script Bash, playbook Ansible o Dockerfile.
 
 Chiave ``supports``
 ~~~~~~~~~~~~~~~~~~~

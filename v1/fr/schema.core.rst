@@ -273,12 +273,8 @@ Les valeurs autorisées sont:
    une suite bureautique).
 -  ``library`` - Le logiciel est une bibliothèque ou un SDK destiné à être
    utilisé par des développeurs dans d'autres projets logiciels.
--  ``configurationFiles`` - Le logiciel ne contient pas de script
-   exécutable, mais une série de fichiers de configuration. Ils peuvent
-   documenter la manière d'obtenir un certain type de déploiement. Les fichiers
-   susmentionnés peuvent prendre la forme de simples fichiers de configuration,
-   des scripts bash, de playbook ansible, de fichiers *dockerfiles*,
-   ou d’autres jeux d’instructions.
+-  ``configurationFiles`` - Fichiers de configuration ou scripts pour un
+   déploiement, comme des scripts Bash, des playbooks Ansible ou des Dockerfiles.
 
 
 Clé ``supports``

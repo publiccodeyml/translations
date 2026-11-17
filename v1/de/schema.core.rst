@@ -266,11 +266,8 @@ Die zulässigen Werte sind:
    Theme, für eine komplexere Software (z. B. ein CMS oder ein Office-Paket).
 -  ``library`` - Die Software ist eine Bibliothek oder ein SDK zur Verwendung
    durch Entwickler in anderen Softwareprojekten.
--  ``configurationFiles`` - Die Software enthält keine ausführbaren Skripte,
-   sondern eine Sammlung von Konfigurationsdateien. Diese können dokumentieren,
-   wie eine bestimmte Bereitstellung erreicht wird. Sie können als einfache
-   Konfigurationsdateien, Bash-Skripte, Ansible-Playbooks, Dockerfiles oder
-   andere Anweisungssätze vorliegen.
+-  ``configurationFiles`` - Konfigurationsdateien oder Skripte für eine
+   Bereitstellung, etwa Bash-Skripte, Ansible-Playbooks oder Dockerfiles.
 
 Schlüssel ``supports``
 ~~~~~~~~~~~~~~~~~~~~~~
