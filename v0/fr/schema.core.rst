@@ -435,7 +435,7 @@ pour créer, par exemple, une page web décrivant le logiciel.
 **N.B. :** dans la mesure où toutes les chaînes de caractères contenues
 dans cette section sont visibles par l’utilisateur et écrites dans une
 langue donnée, il est **nécessaire** d’indiquer la langue avec laquelle le
-le texte est éditée. Pour ce faire, il est nécessaire de créer une section
+texte est édité. Pour ce faire, il est nécessaire de créer une section
 dédiée à la langue, conformément aux spécifications de la
 `BCP 47 <https://www.rfc-editor.org/info/bcp47/>`__ de l’IETF.
 Veuillez noter que l'étiquette *primary language subtag* ne doit pas être
