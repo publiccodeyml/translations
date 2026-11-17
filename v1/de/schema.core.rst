@@ -747,6 +747,8 @@ A ``dependency`` is a mapping with the following properties:
 -  ``version`` - the only major version for which the software is
    compatible. It assumes compatibility with all patches and bugfixes
    later applied to this version.
+   Der Schlüssel DARF NICHT zusammen mit ``versionMin`` oder
+   ``versionMax`` vorhanden sein.
 -  ``optional`` - boolescher Wert: Bei ``true`` funktioniert die Software
    auch ohne die Abhängigkeit. Der Standardwert ist ``false``.
 
