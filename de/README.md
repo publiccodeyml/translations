@@ -15,11 +15,11 @@ Ein Metadaten-Deskriptions-Standard für öffentliche Software.
 - [Beschreibung](#beschreibung)
 - [Funktion der Datei](#funktion-der-datei)
 - [Dokumentation](#dokumentation)
-- [Projekte Finden](#projekte-finden)
+- [Projekte finden](#projekte-finden)
 - [Branches](#branches)
 - [Mitwirken](#mitwirken)
 - [Autoren](#autoren)
-- [Lizensierung](#lizensierung)
+- [Lizenzierung](#lizenzierung)
 
 
 ## Beschreibung
@@ -29,7 +29,7 @@ Ein Metadaten-Deskriptions-Standard für öffentliche Software und Repositories,
 
 ## Funktion der Datei
 
-Viele gute Software-Projekte werden von und für die öffentliche Verwaltung entwicklt, allerdings ist die Nachnutzung dieser Projekte meist sehr begrenzt. Einige der Gründe dafür sind die geringe Auffindbarkeit und die Schwierigkeit festzustellen, welche Projekte tatsächlich innerhalb der Gegebenheiten anderer Verwaltungen funktionieren.
+Viele gute Software-Projekte werden von und für die öffentliche Verwaltung entwickelt, allerdings ist die Nachnutzung dieser Projekte meist sehr begrenzt. Einige der Gründe dafür sind die geringe Auffindbarkeit und die Schwierigkeit festzustellen, welche Projekte tatsächlich innerhalb der Gegebenheiten anderer Verwaltungen funktionieren.
 Die Publiccode.yml-Datei soll diese Probleme lösen. Daher handelt es sich um eine Datei, die sowohl für Mitarbeitende der Verwaltung, die herausfinden möchten, ob sie ein Projekt nachnutzen können, leicht lesbar ist als auch für Computer. Es enthält Informationen, wie:
 
 * Den Titel und die Beschreibung des Projekts oder Produkts auf Englisch und/oder anderen Sprachen;
@@ -52,7 +52,7 @@ Das Dateiformat Publiccode.yml soll sowohl einfach zu jedem neuen Projekt hinzug
 Die aktuelle Dokumentation des Projekts wird auf der [publiccode.yml-Website](https://publiccodeyml.github.io/) veröffentlicht. Die übersetzten Standardseiten bleiben in diesem Repository erhalten.
 
 
-## Projekte Finden
+## Projekte finden
 
 Das Finden von Projekten hängt von der Struktur der Such-API der jeweiligen Hosting-Plattform ab. Zum Beispiel findet man alle `publiccode.yml`-Dateien im Hauptverzeichnis von Projekten auf GitHub über das Suchfrontend oder die API.
 
@@ -85,6 +85,6 @@ Außerdem nutzt das Projekt Branches und Tags folgendermaßen:
 Die Publiccode.yml-Spezifikationen werden von den [Autoren](https://github.com/publiccodeyml/publiccode.yml/blob/main/AUTHORS.md) entwickelt.
 
 
-## Lizensierung
+## Lizenzierung
 
-Lizensiert unter [CC-0](https://github.com/publiccodeyml/publiccode.yml/blob/main/LICENSE).
+Lizenziert unter [CC-0](https://github.com/publiccodeyml/publiccode.yml/blob/main/LICENSE).
