@@ -30,7 +30,7 @@ Chiavi e Sezioni Top-Level
 Chiave ``publiccodeYmlVersion``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Tipo: stringa enumerata
+-  Tipo: :ref:`stringa enumerata <enumerated-string-type>`
 -  Presenza: obbligatoria
 -  Esempio: ``"1"``
 
@@ -226,7 +226,7 @@ Un link ad una *roadmap* pubblica del software.
 Chiave ``developmentStatus``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Tipo: stringa enumerata
+-  Tipo: :ref:`stringa enumerata <enumerated-string-type>`
 -  Presenza: obbligatoria
 -  Valori permessi: ``concept``, ``development``, ``beta``, ``stable``,
    ``obsolete``
@@ -251,7 +251,7 @@ I valori ammessi sono:
 Chiave ``softwareType``
 ~~~~~~~~~~~~~~~~~~~~~~~
 
--  Tipo: stringa enumerata
+-  Tipo: :ref:`stringa enumerata <enumerated-string-type>`
 -  Presenza: obbligatoria
 -  Valori permessi: ``"standalone/mobile"``, ``"standalone/iot"``,
    ``"standalone/desktop"``, ``"standalone/web"``, ``"standalone/backend"``,
@@ -646,7 +646,7 @@ meno.
 Chiave ``maintenance/type``
 '''''''''''''''''''''''''''
 
--  Tipo: enumerate
+-  Tipo: :ref:`stringa enumerata <enumerated-string-type>`
 -  Presenza: obbligatoria
 -  Valori: ``"internal"``, ``"contract"``, ``"community"``, ``"none"``
 
