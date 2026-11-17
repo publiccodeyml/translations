@@ -118,10 +118,10 @@ Key ``softwareVersion``
 -  Vorhandensein: optional
 -  Beispiel: ``"1.0"``, ``"dev"``
 
-This key contains the latest stable version number of the software. The
-version number is a string that is not meant to be interpreted and
-parsed but just displayed; parsers should not assume semantic versioning
-or any other specific version format.
+Dieser Schlüssel enthält die neueste stabile Versionsnummer der Software.
+Parser SOLLTEN diese Zeichenkette anzeigen, ohne sie zu interpretieren oder
+zu parsen. Sie SOLLTEN NICHT von semantischer Versionierung oder einem
+anderen Versionsformat ausgehen.
 
 Key ``releaseDate``
 ~~~~~~~~~~~~~~~~~~~
