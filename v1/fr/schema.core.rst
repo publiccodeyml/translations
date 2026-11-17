@@ -11,12 +11,11 @@ Clés de haut niveau et Sections
 Clé ``publiccodeYmlVersion``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Type: chaîne de caractères
+-  Type: chaîne de caractères énumérée
 -  Présence: obligatoire
--  Exemple: ``"0"``
+-  Exemple: ``"1"``
 
-Cette clé décrit, à des fins de compatibilité, la version à laquelle adhère
-le présent fichier ``publiccode.yml``.
+La version de la spécification à laquelle le fichier adhère : ``"1"``.
 
 Clé ``name``
 ~~~~~~~~~~~~
