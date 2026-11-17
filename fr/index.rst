@@ -37,13 +37,6 @@ Les détails apportés par un fichier ``publiccode.yml`` inclus :
   
 et bien plus encore.
 
-Voir aussi
-----------
-
-- `Plus d'informations à propos de la réutilisation d'un logiciel <https://developers.italia.it/en/reuse>`__
-- `publiccode.yml éditeur web
-  <https://publiccode-editor.developers.italia.it/>`__
-
 Table du contenu
 -----------------
 

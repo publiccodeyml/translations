@@ -38,12 +38,6 @@ Tra le informazioni contenute in un ``publiccode.yml`` vi sono:
   
 e molte altre informazioni rilevanti.
 
-Link utili
-----------
-
-- `Maggiori informazioni sul riuso del software <https://developers.italia.it/it/riuso>`__
-- `Editor web per publiccode.yml <https://publiccode-editor.developers.italia.it/>`__
-
 Indice dei contenuti
 --------------------
 
