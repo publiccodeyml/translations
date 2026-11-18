@@ -37,6 +37,13 @@ Les détails apportés par un fichier ``publiccode.yml`` inclus :
 
 et bien plus encore.
 
+Un ``publiccode.yml`` minimal :
+
+.. literalinclude:: example/publiccode.minimal.yml
+   :language: yaml
+
+L':doc:`exemple complet <example>` utilise toutes les clés.
+
 .. toctree::
    :maxdepth: 2
    :hidden:

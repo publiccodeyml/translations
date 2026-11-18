@@ -1,24 +1,10 @@
-Esempi
-==========================
+Esempio completo
+================
 
-Qui di seguito vi sono due esempi di file ``publiccode.yml``, il primo
-rappresenta la configurazione minima, ovvero contiene i campi obbligatori,
-mentre il secondo è più esteso.
-
-Versione Minima
-~~~~~~~~~~~~~~~
-
-.. literalinclude:: example/publiccode.minimal.yml
-   :language: yaml
-   :linenos:
-
-
-Versione Estesa
-~~~~~~~~~~~~~~~
+Questo esempio usa tutte le chiavi, comprese quelle deprecate. La
+descrizione in inglese usa tutti i campi disponibili. La descrizione in
+inglese britannico (``en-GB``) usa solo i campi obbligatori per ogni
+lingua.
 
 .. literalinclude:: example/publiccode.yml
    :language: yaml
-   :linenos:
-
-
-

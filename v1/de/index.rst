@@ -25,6 +25,13 @@ Zu den Informationen, die in einer publiccode.yml-Datei enthalten sind, gehören
 
 und noch viel mehr.
 
+Eine minimale ``publiccode.yml``:
+
+.. literalinclude:: example/publiccode.minimal.yml
+   :language: yaml
+
+Das :doc:`vollständige Beispiel <example>` verwendet alle Schlüssel.
+
 .. toctree::
    :maxdepth: 2
    :hidden:
