@@ -1,0 +1,123 @@
+publiccodeYmlVersion: "1"
+
+name: Firefax
+url: https://example.com/firefax.git
+landingURL: https://example.com/firefax
+softwareType: standalone/desktop
+platforms:
+  - linux
+  - windows
+  - mac
+developmentStatus: stable
+softwareVersion: "2.3"
+releaseDate: "2026-03-15"
+logo: img/logo.svg
+applicationSuite: MegaProductivitySuite
+isBasedOn:
+  - https://example.com/openfax.git
+roadmap: https://example.com/firefax/roadmap
+
+description:
+  en:
+    localisedName: Firefax
+    shortDescription: Send and receive faxes from the desktop
+    longDescription: >
+      Firefax lets you send and receive faxes from a desktop computer
+      without a fax machine. You can search received faxes in an archive,
+      schedule outgoing faxes and track their delivery.
+
+
+      Offices that exchange documents by fax can keep those documents
+      in one archive and replace their fax machines.
+    documentation: https://example.com/firefax/docs
+    apiDocumentation: https://example.com/firefax/api
+    features:
+      - Send and receive faxes without a fax machine
+      - Search the archive of received faxes
+      - Schedule outgoing faxes
+      - Track the delivery of every fax
+      - Sign outgoing faxes digitally
+    screenshots:
+      - img/screenshots/inbox.png
+      - img/screenshots/compose.png
+    videos:
+      - https://www.youtube.com/watch?v=xxxxxxxxxxx
+    awards:
+      - Public Sector Software Award 2025
+  en-GB:
+    shortDescription: Send and receive faxes from your computer
+
+legal:
+  license: EUPL-1.2 OR AGPL-3.0-or-later
+  mainCopyrightOwner: Example City Council
+
+organisation:
+  uri: https://example.com/organisations/example-city-council
+  name: Example City Council
+
+maintenance:
+  type: contract
+  contractors:
+    - name: Example Software Ltd
+      until: "2027-12-31"
+      email: firefax-maintenance@supplier.example.com
+      website: https://supplier.example.com
+  contacts:
+    - name: Jane Doe
+      email: jane.doe@supplier.example.com
+      affiliation: Example Software Ltd
+      phone: "+441234567890"
+
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - en
+    - en-GB
+    - fr
+
+categories:
+  - communications
+  - document-management
+
+supports:
+  - id: alias:eidas
+  - id: alias:gdpr
+
+intendedAudience:
+  countries:
+    - GB
+  unsupportedCountries:
+    - US
+  scope:
+    - local-authorities
+
+usedBy:
+  - Example City Council
+  - Example County Council
+
+fundedBy:
+  - name: Example City Council
+    uri: https://example.com/organisations/example-city-council
+
+dependsOn:
+  open:
+    - name: PostgreSQL
+      version: "16"
+    - name: Ghostscript
+      versionMin: "10.0"
+      versionMax: "10.5"
+      optional: true
+  proprietary:
+    - name: Oracle Database
+      versionMin: "19"
+      versionMax: "23"
+      optional: true
+    - name: Proprietary fax driver
+      version: "3"
+  hardware:
+    - name: Fax modem
+      versionMin: "1"
+      versionMax: "2"
+      optional: true
+    - name: USB fax adapter
+      version: "3"
