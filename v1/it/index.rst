@@ -38,6 +38,13 @@ Tra le informazioni contenute in un ``publiccode.yml`` vi sono:
 
 e molte altre informazioni rilevanti.
 
+Un ``publiccode.yml`` minimo:
+
+.. literalinclude:: example/publiccode.minimal.yml
+   :language: yaml
+
+L':doc:`esempio completo <example>` usa tutte le chiavi.
+
 .. toctree::
    :maxdepth: 2
    :hidden:

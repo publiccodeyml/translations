@@ -1,20 +1,10 @@
-Beispiel
-==============
+Vollständiges Beispiel
+======================
 
-Unten folgen zwei Beispiele von publiccode.yml-Dateien. Das erste zeigt die Minimal-Konfiguration, die nur die zwingend erforderlichen Felder enthält, das zweite eine ausführlichere Version.
-
-
-Minimal-Konfiguration
-~~~~~~~~~~~~~~~~~~~~~
-
-.. literalinclude:: example/publiccode.minimal.yml
-   :language: yaml
-   :linenos:
-
-
-Ausführlichere Version
-~~~~~~~~~~~~~~~~~~~~~~~
+Dieses Beispiel verwendet alle Schlüssel, auch die veralteten. Die
+englische Beschreibung verwendet alle verfügbaren Felder. Die
+britisch-englische Beschreibung (``en-GB``) verwendet nur die Felder,
+die für jede Sprache erforderlich sind.
 
 .. literalinclude:: example/publiccode.yml
    :language: yaml
-   :linenos:
