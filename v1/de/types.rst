@@ -1,91 +1,160 @@
 Typen
 =====
 
-Die folgenden Regeln gelten für alle Schlüssel der auf dieser
-Seite beschriebenen Typen.
+Jeder Schlüssel nennt seinen Typ unter seinem Namen. Werte MÜSSEN
+den Regeln dieses Typs folgen.
 
-.. _string-type:
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   types/string
+   types/boolean
+   types/array
+   types/date
+   types/enumerated-string
+   types/language-tag
+   types/country-code
+   types/email
+   types/path
+   types/uri
+   types/url
+   types/contact
+   types/contractor
+   types/dependency
+   types/organisation
 
 Zeichenkette
 ------------
 
-Eine Folge von Unicode-Zeichen. Werte der Typen Datum, enumerierte
-Zeichenkette, Sprach-Tag, Ländercode, E-Mail-Adresse, Pfad, URI und URL sind
-Zeichenketten und MÜSSEN ebenfalls diesen Regeln folgen.
+.. raw:: html
 
-Parser MÜSSEN führende und nachfolgende Leerraumzeichen ignorieren.
-Der verbleibende Wert DARF NICHT leer sein.
+   <span id="string-type"></span>
 
-Eine Zeichenkette DARF KEINE Zeilenumbrüche enthalten, es sei denn,
-ihr Schlüssel erlaubt sie.
+Siehe :doc:`types/string`.
 
-Zeichen werden nach dem Entfernen führender und nachfolgender
-Leerraumzeichen gezählt. Dabei sind die in `Unicode Standard
-Annex #29 <https://www.unicode.org/reports/tr29/>`__ definierten
-erweiterten Graphemcluster zu verwenden. Zum Beispiel zählt ``é``
-als ein Zeichen, unabhängig davon, ob es als ein einzelner Codepunkt
-oder als ``e`` gefolgt von einem kombinierenden Akzent gespeichert ist.
+Boolescher Wert
+---------------
 
-Der Wert MUSS eine YAML-Zeichenkette sein: Eine Zahl, ein boolescher
-Wert oder null ist ein Fehler.
+.. raw:: html
 
-.. _enumerated-string-type:
+   <span id="boolean-type"></span>
 
-Enumerierte Zeichenkette
-------------------------
-
-Eine Zeichenkette, die einen der für ihren Schlüssel aufgelisteten
-Werte annimmt.
-
-Bei den Werten wird zwischen Groß- und Kleinschreibung unterschieden:
-Sie sind genau wie aufgelistet zu schreiben.
-
-.. _array-type:
+Siehe :doc:`types/boolean`.
 
 Array
 -----
 
-Eine YAML-Sequenz von Werten. Jedes Element MUSS einen vom Schlüssel
-erlaubten Typ haben. Wenn ein Schlüssel mehrere Typen erlaubt, DARF
-ein Array diese mischen. Zum Beispiel darf
-``description/[lang]/screenshots`` sowohl Pfade als auch URLs enthalten.
+.. raw:: html
 
-Ein Schlüssel dieses Typs MUSS auch bei nur einem Element eine Liste
-enthalten. Zum Beispiel: ``platforms: [web]``.
+   <span id="array-type"></span>
 
-Ein Array MUSS mindestens ein Element enthalten und DARF KEINE
-Duplikate enthalten. Ein optionaler Schlüssel ist wegzulassen, wenn
-keine Elemente aufzulisten sind.
+Siehe :doc:`types/array`.
 
-.. _email-type:
+Datum
+-----
 
-E-Mail-Adresse
---------------
+.. raw:: html
 
-Eine E-Mail-Adresse in der Form ``addr-spec`` aus `RFC 5322
-<https://www.rfc-editor.org/rfc/rfc5322#section-3.4.1>`__, zum Beispiel
-``jane.doe@example.com``. Anzeigenamen wie
-``Jane Doe <jane.doe@example.com>`` sind nicht erlaubt.
+   <span id="date-type"></span>
 
-.. _url-type:
+Siehe :doc:`types/date`.
 
-URL
----
+Enumerierte Zeichenkette
+------------------------
 
-Eine absolute URL einschließlich Schema, zum Beispiel
-``https://example.com/firefax``.
+.. raw:: html
 
-Das Schema MUSS ``http`` oder ``https`` sein, sofern der Schlüssel keine
-anderen erlaubt.
+   <span id="enumerated-string-type"></span>
 
-.. _language-tag-type:
+Siehe :doc:`types/enumerated-string`.
 
 Sprach-Tag
 ----------
 
-Ein Sprach-Tag nach IETF `BCP 47 <https://www.rfc-editor.org/info/bcp47/>`__,
-wie ``en``, ``it`` oder ``de-AT``.
+.. raw:: html
 
-Wie in BCP 47 wird bei Tags nicht zwischen Groß- und Kleinschreibung
-unterschieden. Sie SOLLTEN in der kanonischen Schreibweise geschrieben
-werden, wie ``de-AT``.
+   <span id="language-tag-type"></span>
+
+Siehe :doc:`types/language-tag`.
+
+Ländercode
+----------
+
+.. raw:: html
+
+   <span id="country-code-type"></span>
+
+Siehe :doc:`types/country-code`.
+
+E-Mail-Adresse
+--------------
+
+.. raw:: html
+
+   <span id="email-type"></span>
+
+Siehe :doc:`types/email`.
+
+Pfad
+----
+
+.. raw:: html
+
+   <span id="path-type"></span>
+
+Siehe :doc:`types/path`.
+
+URI
+---
+
+.. raw:: html
+
+   <span id="uri-type"></span>
+
+Siehe :doc:`types/uri`.
+
+URL
+---
+
+.. raw:: html
+
+   <span id="url-type"></span>
+
+Siehe :doc:`types/url`.
+
+Contact
+-------
+
+.. raw:: html
+
+   <span id="contact-type"></span>
+
+Siehe :doc:`types/contact`.
+
+Contractor
+----------
+
+.. raw:: html
+
+   <span id="contractor-type"></span>
+
+Siehe :doc:`types/contractor`.
+
+Dependency
+----------
+
+.. raw:: html
+
+   <span id="dependency-type"></span>
+
+Siehe :doc:`types/dependency`.
+
+Organisation
+------------
+
+.. raw:: html
+
+   <span id="organisation-type"></span>
+
+Siehe :doc:`types/organisation`.

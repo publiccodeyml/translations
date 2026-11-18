@@ -1,89 +1,160 @@
 Tipi
 ====
 
-Le regole seguenti si applicano a tutte le chiavi dei tipi descritti
-in questa pagina.
+Ogni chiave indica il proprio tipo sotto il nome. I valori DEVONO
+seguire le regole di quel tipo.
 
-.. _string-type:
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   types/string
+   types/boolean
+   types/array
+   types/date
+   types/enumerated-string
+   types/language-tag
+   types/country-code
+   types/email
+   types/path
+   types/uri
+   types/url
+   types/contact
+   types/contractor
+   types/dependency
+   types/organisation
 
 Stringa
 -------
 
-Una sequenza di caratteri Unicode. I valori di tipo data, stringa
-enumerata, tag di lingua, codice paese, indirizzo e-mail, percorso,
-URI e URL sono stringhe e DEVONO seguire anch'essi queste regole.
+.. raw:: html
 
-I parser DEVONO ignorare gli spazi bianchi iniziali e finali. Il
-valore rimanente NON DEVE essere vuoto.
+   <span id="string-type"></span>
 
-Una stringa NON DEVE contenere interruzioni di riga, a meno che la
-sua chiave non le consenta.
+Vedi :doc:`types/string`.
 
-Contare i caratteri dopo aver rimosso gli spazi bianchi iniziali e
-finali. Usare i cluster di grafemi estesi definiti in `Unicode
-Standard Annex #29 <https://www.unicode.org/reports/tr29/>`__. Ad
-esempio, ``é`` conta come un carattere sia quando è memorizzato come
-un solo punto di codice sia come ``e`` seguito da un accento
-combinante.
+Booleano
+--------
 
-Il valore DEVE essere una stringa YAML: un numero, un booleano o
-null è un errore.
+.. raw:: html
 
-.. _enumerated-string-type:
+   <span id="boolean-type"></span>
 
-Stringa enumerata
------------------
-
-Una stringa che assume uno dei valori elencati per la sua chiave.
-
-I valori distinguono tra maiuscole e minuscole: scriverli esattamente
-come elencati.
-
-.. _array-type:
+Vedi :doc:`types/boolean`.
 
 Array
 -----
 
-Una sequenza YAML di valori. Ogni elemento DEVE avere un tipo
-consentito dalla chiave. Quando una chiave consente più tipi, un
-array PUÒ combinarli. Ad esempio,
-``description/[lang]/screenshots`` può contenere sia percorsi sia URL.
+.. raw:: html
 
-Una chiave di questo tipo DEVE contenere un elenco anche quando ha
-un solo elemento. Ad esempio, scrivere ``platforms: [web]``.
+   <span id="array-type"></span>
 
-Un array DEVE contenere almeno un elemento e NON DEVE contenere
-duplicati. Omettere una chiave opzionale se non ci sono elementi
-da elencare.
+Vedi :doc:`types/array`.
 
-.. _email-type:
+Data
+----
 
-Indirizzo e-mail
-----------------
+.. raw:: html
 
-Un indirizzo e-mail nella forma ``addr-spec`` di `RFC 5322
-<https://www.rfc-editor.org/rfc/rfc5322#section-3.4.1>`__, ad esempio
-``jane.doe@example.com``. Non sono consentiti nomi visualizzati come
-``Jane Doe <jane.doe@example.com>``.
+   <span id="date-type"></span>
 
-.. _url-type:
+Vedi :doc:`types/date`.
 
-URL
----
+Stringa enumerata
+-----------------
 
-Un URL assoluto, incluso lo schema, ad esempio
-``https://example.com/firefax``.
+.. raw:: html
 
-Lo schema DEVE essere ``http`` o ``https``, a meno che la chiave non ne
-consenta altri.
+   <span id="enumerated-string-type"></span>
 
-.. _language-tag-type:
+Vedi :doc:`types/enumerated-string`.
 
 Tag di lingua
 -------------
 
-Un tag di lingua IETF `BCP 47 <https://www.rfc-editor.org/info/bcp47/>`__,
-come ``en``, ``it`` o ``de-AT``.
+.. raw:: html
 
-Come previsto da BCP 47, i tag non distinguono tra maiuscole e minuscole.
-DOVREBBERO essere scritti nella forma canonica, come ``de-AT``.
+   <span id="language-tag-type"></span>
+
+Vedi :doc:`types/language-tag`.
+
+Codice paese
+------------
+
+.. raw:: html
+
+   <span id="country-code-type"></span>
+
+Vedi :doc:`types/country-code`.
+
+Indirizzo e-mail
+----------------
+
+.. raw:: html
+
+   <span id="email-type"></span>
+
+Vedi :doc:`types/email`.
+
+Percorso
+--------
+
+.. raw:: html
+
+   <span id="path-type"></span>
+
+Vedi :doc:`types/path`.
+
+URI
+---
+
+.. raw:: html
+
+   <span id="uri-type"></span>
+
+Vedi :doc:`types/uri`.
+
+URL
+---
+
+.. raw:: html
+
+   <span id="url-type"></span>
+
+Vedi :doc:`types/url`.
+
+Contatto
+--------
+
+.. raw:: html
+
+   <span id="contact-type"></span>
+
+Vedi :doc:`types/contact`.
+
+Contractor
+----------
+
+.. raw:: html
+
+   <span id="contractor-type"></span>
+
+Vedi :doc:`types/contractor`.
+
+Dependency
+----------
+
+.. raw:: html
+
+   <span id="dependency-type"></span>
+
+Vedi :doc:`types/dependency`.
+
+Organisation
+------------
+
+.. raw:: html
+
+   <span id="organisation-type"></span>
+
+Vedi :doc:`types/organisation`.

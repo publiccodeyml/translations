@@ -27,27 +27,811 @@ questo consente al crawler automatico di Developers Italia di costituire il
 software open source per la pubblica amministrazione. ``publiccode.yml`` è
 pensato per essere interoperabile a livello internazionale.
 
-Tra le informazioni contenute in un ``publiccode.yml`` vi sono: 
+Tra le informazioni contenute in un ``publiccode.yml`` vi sono:
 
-- il titolo e la descrizione del progetto o prodotto (in una o più lingue); 
--  lo stato dello sviluppo ad es., ``concept``, ``development``, ``beta``, ``stable``, ``obsolete``; 
--  il nome e l’URI dell’organizzazione che pubblica il software; 
--  chi si sta occupando della sua manutenzione e quando il rapporto finirà; 
--  per quale quadro giuridico è stato pensato questo progetto o prodotto; 
+- il titolo e la descrizione del progetto o prodotto (in una o più lingue);
+-  lo stato dello sviluppo ad es., ``concept``, ``development``, ``beta``, ``stable``, ``obsolete``;
+-  il nome e l’URI dell’organizzazione che pubblica il software;
+-  chi si sta occupando della sua manutenzione e quando il rapporto finirà;
+-  per quale quadro giuridico è stato pensato questo progetto o prodotto;
 -  quali dipendenze software esistono.
-  
+
 e molte altre informazioni rilevanti.
 
-Indice dei contenuti
---------------------
-
-.. toctree:: 
+.. toctree::
    :maxdepth: 2
+   :hidden:
 
    types.rst
-   schema.core.rst
+   vocabularies.rst
    forks.rst
-   categories-list.rst
-   scope-list.rst
-   aliases-list.rst
    example.rst
+
+Convenzioni
+-----------
+
+Le parole chiave MUST, MUST NOT, REQUIRED, SHOULD, SHOULD NOT,
+RECOMMENDED, MAY e OPTIONAL in questo documento devono essere interpretate
+come descritto in BCP 14 (`RFC 2119 <https://www.rfc-editor.org/rfc/rfc2119>`__,
+`RFC 8174 <https://www.rfc-editor.org/rfc/rfc8174>`__) solo quando sono
+scritte interamente in maiuscolo. I corrispondenti termini italiani
+DEVE, NON DEVE, OBBLIGATORIO, DOVREBBE, NON DOVREBBE, RACCOMANDATO,
+PUÒ e OPZIONALE hanno la stessa forza normativa quando sono scritti
+interamente in maiuscolo.
+
+Una chiave indicata come obbligatoria DEVE essere presente. All'interno
+di una sezione opzionale, le chiavi obbligatorie DEVONO essere presenti
+se si include tale sezione. Le altre chiavi sono opzionali, salvo che
+la loro descrizione specifichi una condizione.
+
+Una chiave NON DEVE avere un valore null. Omettere una chiave opzionale
+se non si ha un valore da assegnarle. Un file NON DEVE contenere chiavi
+che questa specifica non definisce.
+
+.. _core:
+
+Specifica
+---------
+
+Chiave ``publiccodeYmlVersion``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: :ref:`stringa enumerata <enumerated-string-type>`
+-  Presenza: obbligatoria
+-  Esempio: ``"1"``
+
+La versione della specifica a cui aderisce il file: ``"1"``.
+
+
+Chiave ``name``
+~~~~~~~~~~~~~~~
+
+-  Tipo: stringa
+-  Presenza: obbligatoria
+-  Esempio: “Office Suite”
+
+Questa chiave contiene il nome del software. Contiene il nome
+(abbreviato) pubblico del prodotto, che può essere tradotto usando la
+chiave ``description/[lang]/localisedName``. Dovrebbe essere il nome con
+il quale la maggior parte delle persone si riferisce al suddetto
+software. Nel caso in cui il software abbia sia un nome in “codice”
+interno che uno commerciale, è preferibile usare il nome commerciale.
+
+
+Chiave ``url``
+~~~~~~~~~~~~~~
+
+-  Tipo: stringa (URL)
+-  Presenza: obbligatoria
+-  Esempio: ``"https://example.com/office-suite.git"``
+
+Un identificatore unico per questo software. Questa stringa deve essere
+una URL che punta al repository di codice sorgente (git, svn, …) nel
+quale il software è pubblicato. Se il repository è disponibile sotto
+diversi protocolli, preferire URL HTTP/HTTPS che non richiedono
+l’autenticazione.
+
+I fork creati con lo scopo di contribuire *upstream* non devono
+modificare questo file; questo aiuta i software che fanno il parsing di
+``publiccode.yml`` a saltare immediatamente i fork tecnici. Al
+contrario, un fork completo che sarà manutenuto
+in modo separato rispetto al software originale, dovrebbe modificare
+questa linea per essere trattato come una variante distinta.
+
+Vedi :ref:`fork-varianti` per una descrizione completa del
+significato di variante software e di come gestire i fork sia lato
+parser che lato autore.
+
+
+Chiave ``softwareType``
+~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: :ref:`stringa enumerata <enumerated-string-type>`
+-  Presenza: obbligatoria
+-  Valori permessi: ``"standalone/mobile"``, ``"standalone/iot"``,
+   ``"standalone/desktop"``, ``"standalone/web"``, ``"standalone/backend"``,
+   ``"standalone/other"``, ``"addon"``, ``"library"``, ``"configurationFiles"``
+
+I valori ammessi sono:
+
+-  ``standalone/mobile`` - Il software è un'applicazione autonoma, tipicamente
+   installata ed eseguita su un sistema operativo mobile.
+-  ``standalone/iot`` - Il software è adatto ad essere utilizzato nel contesto
+   `Internet of Things`.
+-  ``standalone/desktop`` - Il software è tipicamente installato e utilizzato su un
+   sistema operativo desktop.
+-  ``standalone/web`` - Il software è un'applicazione web eseguita su un server
+   e accessibile tramite un browser web.
+-  ``standalone/backend`` - Il software è un'applicazione backend che fornisce
+   interfacce (ad esempio API) ad altri servizi. Tipicamente non fornisce
+   interfacce utente dirette.
+-  ``standalone/other``  - Il software ha una natura diversa rispetto a quanto
+   specificato alle chiavi precedenti.
+-  ``addon`` - Il software è un *addon*,
+   come ad esempio un plugin o un tema, per un software più complesso
+   (e.g., un CMS o una suite per ufficio).
+-  ``library`` - Il software è una libreria o un SDK destinato all'uso
+   da parte di sviluppatori in altri progetti software.
+-  ``configurationFiles`` - File di configurazione o script per un
+   deployment, come script Bash, playbook Ansible o Dockerfile.
+
+
+Chiave ``platforms``
+~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: lista di stringhe
+-  Presenza: obbligatoria
+-  Valori: ``web``, ``windows``, ``mac``, ``linux``, ``ios``,
+   ``android``. Valori leggibili da un umano al di fuori di questa lista
+   sono permessi.
+
+.. code-block:: yaml
+   :caption: Esempio
+
+   platforms:
+     - web
+
+Questa chiave specifica su quale piattaforma funziona il software. È
+pensata per descrivere le piattaforme che l’utente userà per accedere ed
+utilizzare il software, piuttosto che la piattaforma sulla quale il
+software gira.
+
+Se possibile, usare i valori predefiniti. Se il software gira su una
+piattaforma per la quale un valore predefinito non è disponibile, un
+diverso valore può essere usato.
+
+
+Chiave ``developmentStatus``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: :ref:`stringa enumerata <enumerated-string-type>`
+-  Presenza: obbligatoria
+-  Valori permessi: ``concept``, ``development``, ``beta``, ``stable``,
+   ``obsolete``
+
+I valori ammessi sono:
+
+-  ``concept`` - Il software è solo un “concept”. Non è
+   stato sviluppato codice e il repository potrebbe semplicemente essere un
+   placeholder.
+-  ``development`` - Qualche sforzo è stato fatto in
+   direzione dello sviluppo del software ma il codice non è pronto per
+   l’utenza finale, nemmeno in una versione preliminare (beta o alpha) per
+   essere testato dall’utenza.
+-  ``beta`` - Il software è in fase di
+   testing (alpha o beta). In questo stage, il software potrebbe aver o non
+   aver ancora avuto una release pubblica preliminare.
+-  ``stable`` - Il software ha già avuto una prima release pubblica ed è pronto
+   per essere usato in un contesto di produzione.
+-  ``obsolete`` - Il software non è più manutenuto o aggiornato. Tutto il codice
+   sorgente è archiviato e tenuto per ragioni di storico.
+
+
+Sezione ``description``
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Questa sezione contiene una descrizione generale del software. I parser
+possono usare questa sezione ad esempio per creare una pagina web che
+descriva il software.
+
+**Nota bene:** siccome tutte le stringhe contenute in questa sezione sono
+visibili all’utente e scritte in un linguaggio specifico, è
+**necessario** specificare il linguaggio con il quale si sta modificando
+il testo. Per farlo è necessario creare una sezione dedicata alla lingua
+usando un :ref:`tag di lingua <language-tag-type>` secondo le specifiche IETF BCP 47. Si
+ricorda che il *primary language
+subtag* non può essere omesso, come specificato nel BCP 47.
+
+Un esempio per l’italiano:
+
+.. code:: yaml
+
+   description:
+     it:
+       shortDescription: ...
+       longDescription: ...
+
+Nelle parti successive del documento, tutte le chiavi sono assunte essere
+all’interno di una sezione con il nome della lingua (annoteremo questo
+con ``[lang]``).
+
+**Nota bene:** è obbligatorio avere *almeno* una lingua in questa
+sezione. Tutte le altre lingue sono opzionali.
+
+Chiave ``description/[lang]/localisedName``
+'''''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: stringa
+-  Presenza: opzionale
+-  Esempio: ``"Office Suite"``
+
+Questa chiave rappresenta un’opportunità di tradurre il nome in una
+lingua specifica. Contiene il nome pubblico (corto) del prodotto.
+Dovrebbe essere il nome con il quale la maggioranza delle persone
+normalmente si riferisce al software. Nel caso in cui il software abbia
+sia un nome “interno” che uno commerciale, è preferibile utilizzare
+quello commerciale.
+
+Chiave ``description/[lang]/shortDescription``
+''''''''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: stringa (max 150 caratteri)
+-  Presenza: obbligatoria
+-  Esempio: ``"Sistema avanzato di prenotazione per ospedali"``
+
+Questa chiave contiene una breve descrizione del software. Dovrebbe
+essere una singola linea contenente una singola frase. L’estensione
+massima consentita è di 150 caratteri.
+
+Chiave ``description/[lang]/longDescription``
+'''''''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: stringa Markdown (min 150 caratteri, max 10000 caratteri)
+-  Presenza: obbligatoria (almeno per una lingua)
+
+Questa chiave contiene una descrizione più lunga del software, con una
+lunghezza che può variare da 150 a 10000 caratteri. Questa chiave è
+pensata per fornire una panoramica delle caratteristiche del software
+per un potenziale utente. Il destinatario di questo testo dovrebbe
+essere l’utente finale, non lo sviluppatore. E’ possibile pensare a
+questo testo come alla descrizione del software che potrebbe stare nel
+sito web (nel caso in cui il software ne possieda uno).
+
+Il valore di questa chiave è Markdown, come definito da
+`CommonMark <https://commonmark.org/>`__. Usare una formattazione di base:
+``*italic*``, ``**bold**``, elenchi puntati e ``[link](#)``, poiché i
+consumatori POSSONO visualizzare solo questo sottoinsieme.
+
+Chiave ``description/[lang]/documentation``
+'''''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: URL
+-  Presenza: opzionale
+
+Questa chiave contiene un riferimento alla documentazione lato utente
+(non lato sviluppatore). Questo valore deve essere una URL che punta ad
+una versione ospitata della documentazione.
+
+È suggerito che questa URL punti ad una versione ospitata della
+documentazione che sia direttamente leggibile utilizzando un comune web
+browser sia in formato desktop che mobile. La documentazione dovrebbe
+essere renderizzata in HTML e navigabile come un sito web (con un
+indice, una barra di ricerca, etc.).
+
+Se la documentazione dovesse invece essere disponibile esclusivamente
+sotto forma di documento, è possibile inserire il link diretto per
+vedere/scaricare tale documento, sotto forma di URL, in questa chiave.
+E’ consigliabile trattare la documentazione come parte del codice
+sorgente e dunque gestirla tramite commit sul repository del codice
+sorgente. In questo modo, sarà possibile fornire una URL diretta alla
+piattaforma di hosting del codice (ad es., GitHub URL al file). E’
+preferibile utilizzare formati aperti quali PDF o ODT per avere la
+massima interoperabilità. Qualunque sia il formato della documentazione,
+è importante ricordare di rilasciarne i sorgenti coperti da licenza
+aperta, possibilmente effettuandone un commit all’interno del repository
+stesso.
+
+Chiave ``description/[lang]/apiDocumentation``
+''''''''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: URL
+-  Presenza: opzionale
+
+Questa chiave contiene un riferimento alla documentazione delle API del
+software. Il valore deve essere una URL verso una versione ospitata
+della documentazione.
+
+E’ suggerito che questa URL punti ad una versione ospitata della
+documentazione che sia direttamente leggibile utilizzando un comune web
+browser. La documentazione dovrebbe essere renderizzata in HTML e
+navigabile come un sito web (con un indice, una barra di ricerca, etc.),
+e se c’è un riferimento ad un deployment di prova, questo dovrebbe
+offrire un’interfaccia navigabile (e.g. Swagger).
+
+Se la documentazione dovesse invece essere disponibile esclusivamente
+sotto forma di documento, è possibile inserire il link diretto per
+vedere/scaricare tale documento, sotto forma di URL, in questa chiave.
+E’ consigliabile trattare la documentazione come parte del codice
+sorgente e dunque gestirla tramite commit sul repository del codice
+sorgente. In questo modo, sarà possibile fornire una URL diretta alla
+piattaforma di hosting del codice (ad es., GitHub URL al file). E’
+preferibile utilizzare formati aperti quali PDF o ODT per avere la
+massima interoperabilità.
+
+Qualunque sia il formato della documentazione, è importante ricordare di
+rilasciarne i sorgenti coperti da licenza aperta, possibilmente
+effettuandone un commit all’interno del repository stesso.
+
+Chiave ``description/[lang]/features``
+''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di stringhe
+-  Presenza: opzionale
+
+Questa chiave contiene una lista di *feature* del software, che descriva
+le possibilità offerte dallo stesso. Il target di questo testo sono i
+decisori pubblici che potranno decidere di adottarlo o modificarlo. Per
+questo motivo, queste feature *non* devono riferirsi agli sviluppatori:
+invece di elencare le caratteristiche tecniche riferite ai dettagli
+implementativi, è preferibile elencare le funzionalità lato utente.
+
+Il numero di feature suggerito da elencare è tra 5 e 20, a seconda della
+dimensione del software e della sua complessità. Non c’è bisogno di fare
+una lista esaustiva, dal momento che gli utenti hanno sempre a
+disposizione la documentazione per reperire ulteriori informazioni.
+
+Chiave ``description/[lang]/screenshots``
+'''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di stringhe (percorsi)
+-  Presenza: opzionale
+-  Formati: PNG, JPEG, WebP, AVIF
+-  Esempio: ``"data/screenshots/configuration.png"``
+
+Questa chiave indica una o più immagini del software (screenshot). Queste
+hanno lo scopo di dare una panoramica dell'aspetto del software e del
+suo funzionamento. Il valore può essere il percorso relativo al file a partire
+dalla root del repository, oppure una URL assoluta che punta all'immagine in
+versione raw. In entrambi i casi, il file deve risiedere all'interno del
+medesimo repository che contiene il ``publiccode.yml``.
+
+Queste immagini possono essere di qualsiasi formato e dimensione; i
+formati suggeriti sono:
+
+-  Desktop: 1280x800 @1x
+-  Tablet: 1024x768 @2x
+-  Mobile: 375x667 @2x
+
+Chiave ``description/[lang]/videos`` (*deprecata*)
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di stringhe (URL)
+-  Presenza: opzionale
+-  Esempio: ``"https://youtube.com/xxxxxxxx"``
+
+Questa chiave contiene una o più URL di video che mostrano il
+funzionamento del software. Così come gli screenshot, i video dovrebbero
+essere usati per dare una rapida panoramica sull’aspetto e le
+funzionalità del software. I video devono essere ospitati su una
+piattaforma di video sharing che supporti lo standard
+`oEmbed <https://oembed.com>`__; le opzioni più popolari sono YouTube e
+Vimeo.
+
+**Nota bene:** dal momento che costituisce parte integrante della
+documentazione, è opportuno che il video sia pubblicato con una licenza
+aperta.
+
+Questa chiave è deprecata. Collegare invece i video dalla documentazione
+o dal sito web del software.
+
+Chiave ``description/[lang]/awards``
+''''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di stringhe
+-  Presenza: opzionale
+
+Una lista di premi assegnati al software.
+
+
+Sezione ``legal``
+~~~~~~~~~~~~~~~~~
+
+Chiave ``legal/license``
+''''''''''''''''''''''''
+
+-  Tipo: stringa
+-  Presenza: obbligatoria
+-  Esempio: ``"AGPL-3.0-or-later"``
+
+Questa stringa descrive la licenza con cui il software è distribuito. La
+stringa deve contenere un’espressione SPDX valida che si riferisca ad
+una (o più) licenze open-source. Per avere ulteriori informazioni a
+riguardo è possibile visitare la `documentazione
+SPDX <https://spdx.org/licenses/>`__.
+
+Chiave ``legal/mainCopyrightOwner``
+'''''''''''''''''''''''''''''''''''
+
+-  Tipo: stringa
+-  Presenza: opzionale
+-  Esempio: ``"Città di Roma"``
+
+Questa stringa descrive l’entità che possiede il copyright sulla maggior
+parte del codice presente nel repository. Normalmente, questa è la linea
+che viene riportata con il simbolo di copyright all’inizio della maggior
+parte dei file nel repository.
+
+E’ possibile elencare diversi proprietari se necessario, usando una
+frase in inglese. E’ anche possibile riferirsi ad una community o ad un
+gruppo di persone come ad esempio “Linus Torvalds and all Linux
+contributors”.
+
+Nel caso in cui non sia possibile individuare il maggior proprietario di
+copyright, è possibile omettere questa chiave.
+
+
+Sezione ``organisation``
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Questa sezione opzionale indica l'organizzazione che pubblica il software.
+
+Chiave ``organisation/uri``
+'''''''''''''''''''''''''''
+
+-  Tipo: stringa
+-  Presenza: obbligatoria
+-  Esempio: ``"https://example.org/my-organisation"``, ``"urn:x-foobar:my-organisation"``
+
+L'URI che identifica l'organizzazione che pubblica il software. Il valore
+DOVREBBE essere un URI stabile e risolvibile o un identificatore persistente.
+
+I parser POSSONO usare la struttura dell'URI per estrarre informazioni
+aggiuntive se segue un formato riconosciuto (ad esempio, ricavando un dominio
+istituzionale o un codice ufficiale).
+
+Si RACCOMANDA che i crawler e i consumatori di publiccode.yml verifichino
+queste informazioni con mezzi esterni, per assicurarsi che l'URI dichiarato
+corrisponda effettivamente all'organizzazione che controlla il repository.
+Il metodo di verifica specifico dipende dall'implementazione e dalle politiche
+della piattaforma che utilizza il file.
+
+Chiave ``organisation/name``
+''''''''''''''''''''''''''''
+
+-  Tipo: stringa
+-  Presenza: opzionale
+-  Esempio: ``"My organisation"``
+
+Il nome canonico dell'organizzazione che pubblica il software.
+
+DEVE corrispondere alla stessa entità identificata da ``organisation/uri``
+e serve a fornire un'etichetta leggibile per quell'URI.
+DOVREBBE essere la forma canonica e ampiamente riconosciuta del nome
+(come il nome legale o istituzionale registrato).
+
+
+Sezione ``maintenance``
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Questa sezione fornisce informazioni sullo stato di manutenzione del
+software, utile per valutare se il software è attivamente sviluppato o
+meno.
+
+Chiave ``maintenance/type``
+'''''''''''''''''''''''''''
+
+-  Tipo: :ref:`stringa enumerata <enumerated-string-type>`
+-  Presenza: obbligatoria
+-  Valori: ``"internal"``, ``"contract"``, ``"community"``, ``"none"``
+
+Questa chiave descrive come il software è attualmente manutenuto.
+I valori ammessi sono:
+
+-  ``internal`` - significa che il software è manutenuto internamente dal
+   proprietario del repository;
+-  ``contract`` - significa che c’è un contratto commerciale che lega un’entità
+   alla manutenzione del software;
+-  ``community`` - significa che il software è attualmente manutenuto da
+   una o più persone che offrono il loro tempo al progetto;
+-  ``none`` - significa che il software non è al momento manutenuto.
+
+Chiave ``maintenance/contractors``
+''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di :ref:`Contractor <contractor-type>`
+-  Presenza: obbligatoria se ``maintenance/type`` **è** ``contract``; non deve essere presente negli altri casi
+
+Questa chiave descrive l’entità o le entità, se ce ne sono, che
+attualmente hanno un contratto di manutenzione del software. Queste
+possono essere aziende, organizzazioni o altri nomi collettivi.
+
+Chiave ``maintenance/contacts``
+'''''''''''''''''''''''''''''''
+
+-  Tipo: lista di :ref:`Contatti <contact-type>`
+-  Presenza: obbligatoria se ``maintenance/type`` **è** ``internal`` oppure ``community``; opzionale negli altri casi
+
+Uno o più contatti di chi sta mantenendo il software.
+
+Questa chiave descrive le persone tecniche che attualmente sono
+responsabili della manutenzione del software. Tutti i contatti devono
+essere di una persona fisica, non un’azienda o un’organizzazione. Se
+un contatto funge da rappresentante di un’istituzione, questo rapporto
+deve essere esplicitato attraverso la chiave ``affiliation``.
+
+Nel caso di un accordo commerciale (o una catena di tali accordi),
+specificare le entità finali che sono effettivamente contrattate per
+fornire la manutenzione. Non specificare il proprietario del software a
+meno che sia tecnicamente coinvolto anche nella manutenzione del
+prodotto.
+
+
+Sezione ``localisation``
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Questa sezione fornisce una panoramica sulle funzionalità di
+localizzazione del software.
+
+Chiave ``localisation/localisationReady``
+'''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: booleano
+-  Presenza: obbligatoria
+
+Se ``true``, il software ha l’infrastruttura o è stato progettato per
+essere multi-lingua. Ad ogni modo, questo campo non pregiudica
+l’esistenza di una traduzione in altre lingue ma si riferisce
+esclusivamente all’aspetto tecnologico. Per l’elenco delle lingue
+disponibili si veda la chiave ``localisation/availableLanguages``.
+
+Chiave ``localisation/availableLanguages``
+''''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di :ref:`tag di lingua <language-tag-type>` secondo le specifiche IETF BCP 47
+-  Presenza: obbligatoria
+-  Esempio: ``"it"``, ``"en"``, ``"sl-IT-nedis"``
+
+Questa è la lista di lingue in cui è disponibile il
+software. Ovviamente, questa lista dovrà contenere almeno una lingua.
+Si ricorda che il *primary language subtag* non può essere omesso, come
+specificato dal `BCP 47 <https://www.rfc-editor.org/info/bcp47/>`__.
+
+
+Chiave ``logo``
+~~~~~~~~~~~~~~~
+
+-  Tipo: stringa (percorso relativo al file o URL assoluta)
+-  Presenza: opzionale
+-  Formati accettabili: SVG, SVGZ, PNG, JPEG, WebP, AVIF
+-  Esempio: ``"img/logo.svg"``
+
+Questa chiave indica il logo del software. Il valore può essere il percorso
+relativo al file a partire dalla root del repository, oppure una URL assoluta
+che punta al logo in versione raw. In entrambi i casi, il file deve risiedere
+all'interno del medesimo repository che contiene il ``publiccode.yml``.  Il logo
+dovrebbe essere in formato vettoriale.
+
+
+Chiave ``softwareVersion``
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: stringa
+-  Presenza: opzionale
+-  Esempio: ``"1.0"``, ``"dev"``
+
+Questa chiave contiene il numero dell'ultima versione stabile del software.
+I parser DOVREBBERO visualizzare questa stringa senza interpretarla o
+analizzarla. NON DOVREBBERO presumere l'uso del semantic versioning o
+di qualsiasi altro formato di versionamento.
+
+
+Chiave ``releaseDate``
+~~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: stringa (data)
+-  Presenza: opzionale
+-  Esempio: ``"2017-04-15"``
+
+Questa chiave contiene la data di ultimo rilascio del software.
+
+
+Chiave ``landingURL``
+~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: stringa (URL)
+-  Presenza: opzionale
+-  Esempio: ``"https://example.com/office-suite"``
+
+Se la chiave ``url`` non porta ad una pagina leggibile da un umano, ma
+serve solo ad indirizzare un client di source control verso il codice
+sorgente, con questa chiave viene introdotta l’opzione di specificare la
+*landing page*. Questa pagina, idealmente, è il punto di arrivo
+dell’utente quando seleziona un pulsante chiamato, ad esempio, “Vai al
+codice sorgente dell’applicazione”. Nel caso in cui il prodotto preveda
+un installer grafico automatico, questa URL può puntare alla pagina
+contenente un riferimento al codice sorgente ma che offra anche la
+possibilità di scaricare tale installer.
+
+
+Chiave ``applicationSuite``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: stringa
+-  Presenza: opzionale
+-  Esempio: “MegaProductivitySuite”
+
+Questa chiave contiene il nome della “suite” alla quale il software
+appartiene.
+
+
+Chiave ``categories``
+~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: lista di stringhe
+-  Presenza: opzionale
+-  Valori accettabili: vedi :ref:`categories-list`
+
+Una lista di categorie che possono essere usate per descrivere il software
+e possono aiutare a costruire il catalogo di software open.
+
+Il vocabolario controllato :ref:`categories-list` presenta la lista dei valori
+accettabili.
+
+
+Chiave ``supports``
+~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: lista di mapping
+-  Presenza: opzionale
+
+Un elenco di standard, regolamenti, framework o sistemi che il software
+supporta o a cui è conforme.
+
+Ogni elemento è un mapping con una sola proprietà:
+
+-  ``id`` - **obbligatoria** - un identificatore dello standard, regolamento,
+   framework o sistema supportato. È un alias nella forma ``alias:<name>``
+   (ad esempio ``alias:gdpr``), risolto tramite l':ref:`elenco degli alias
+   <aliases-list>`, oppure un altro URI valido (URL o URN) che fa riferimento
+   direttamente alla risorsa.
+
+   Un valore ``alias:`` DEVE esistere nell':ref:`elenco degli alias
+   <aliases-list>`. Un alias sconosciuto è un errore.
+   Ogni altro valore DEVE essere un URI sintatticamente valido. Un valore
+   ben formato ma altrimenti sconosciuto è accettato così com'è.
+
+Esempio:
+
+.. code:: yaml
+
+   supports:
+     - id: alias:gdpr
+     - id: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+
+
+Sezione ``intendedAudience``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Chiave ``intendedAudience/countries``
+'''''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di stringhe
+-  Presenza: opzionale
+
+Questa chiave include in modo esplicito alcuni Paesi tra il pubblico
+previsto, i.e., il software rivendica esplicitamente la conformità con
+processi specifici, tecnologie o leggi. Tutti i Paesi sono specificati
+usando *country code* a due lettere in maiuscolo,
+seguendo lo standard ISO 3166-1 alpha-2.
+
+Chiave ``intendedAudience/unsupportedCountries`` (*deprecata*)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di stringhe
+-  Presenza: opzionale
+
+Questa chiave contrassegna esplicitamente i Paesi **NON** supportati.
+Questa situazione potrebbe verificarsi nel momento in cui esista un
+conflitto tra la modalità di funzionamento del software ed una legge
+specifica, un processo o una tecnologia. Tutti i Paesi sono specificati
+usando *country code* a due lettere in maiuscolo,
+seguendo lo standard ISO 3166-1 alpha-2.
+
+Questa chiave è deprecata, usare invece ``intendedAudience/countries``
+per elencare i Paesi a cui il software si rivolge esplicitamente.
+
+Chiave ``intendedAudience/scope``
+'''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di stringhe
+-  Presenza: opzionale
+-  Valori accettabili: vedi :ref:`scope-list`
+
+Questa chiave contiene una lista di tag che rappresentano il campo
+di applicazione del software.
+
+I tag consentiti sono elencati nella :ref:`scope-list`.
+
+
+Chiave ``usedBy`` (*deprecata*)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: lista di stringhe
+-  Presenza: opzionale
+
+Una lista di nomi di prominenti Pubbliche Amministrazioni (che
+serviranno come “testimonial”) che il maintainer riconosce come
+utilizzatori attuali di questo software.
+
+I parser sono incoraggiati ad accrescere questa lista anche con altre
+informazioni che riescono ad ottenere in modo indipendente; ad esempio,
+il fork di un software, di proprietà di un’amministrazione, può essere
+usato come un segnale di uso del software.
+
+
+Chiave ``fundedBy``
+~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: lista di :ref:`Organisation <organisation-type>`
+-  Presenza: opzionale
+
+Un elenco delle organizzazioni che attualmente finanziano lo sviluppo
+di questo software.
+
+
+Chiave ``roadmap``
+~~~~~~~~~~~~~~~~~~
+
+-  Tipo: stringa
+-  Presenza: opzionale
+
+Un link ad una *roadmap* pubblica del software.
+
+
+Chiave ``isBasedOn``
+~~~~~~~~~~~~~~~~~~~~
+
+-  Tipo: lista di stringhe o una singola stringa (*deprecata*)
+-  Presenza: opzionale
+-  Esempio: ``["https://example.com/document-editor.git"]``
+
+Nel caso in cui questo software sia una variante o un fork di un altro
+software, che opzionalmente può contenere un file ``publiccode.yml``,
+questa chiave conterrà la ``url`` di uno o più progetti originali.
+
+L’esistenza di questa chiave identifica il fork come una variante (vedi
+:ref:`fork-varianti`), discendente dal repository specificato.
+
+La forma con una singola stringa è deprecata. Usare invece una lista
+con un solo elemento.
+
+
+Sezione ``dependsOn``
+~~~~~~~~~~~~~~~~~~~~~
+
+Questa sezione fornisce una panoramica delle dipendenze a livello di
+sistema necessarie per installare ed utilizzare il software.
+
+**Nota bene:** non elencare le dipendenze a livello di codice sorgente
+(ad es., librerie software usate), e focalizza solo su dipendenze di
+sistema e/o a runtime che devono essere installate e manutenute
+separatamente. Ad esempio, un database è un buon esempio di questo tipo
+di dipendenza.
+
+Chiave ``dependsOn/open`` (*deprecata*)
+'''''''''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di :ref:`dependency <dependency-type>`
+-  Presenza: opzionale
+
+Questa chiave contiene una lista di dipendenze a runtime che sono
+distribuite con una licenza di tipo open-source.
+
+Questa chiave è deprecata. Le dipendenze open source a runtime sono già
+dichiarate nella SBOM o nei manifest dei gestori di pacchetti. I requisiti
+di installazione vanno nella documentazione e negli script di deployment.
+
+Chiave ``dependsOn/proprietary``
+''''''''''''''''''''''''''''''''
+
+-  Tipo: lista di :ref:`dependency <dependency-type>`
+-  Presenza: opzionale
+
+Questa chiave contiene una lista di dipendenze a runtime che sono
+distribuite con una licenza proprietaria.
+
+Chiave ``dependsOn/hardware``
+'''''''''''''''''''''''''''''
+
+-  Tipo: lista di :ref:`dependency <dependency-type>`
+-  Presenza: opzionale
+
+Questa chiave contiene una lista di dipendenze hardware di cui è necessario
+disporre per utilizzare il software.
+
+
+Codifica
+--------
+
+``publiccode.yml`` **DEVE** essere un documento codificato in UTF-8 e
+**DEVE** essere un documento YAML 1.2.
