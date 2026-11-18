@@ -474,9 +474,9 @@ vers une version hébergée de la documentation.
 
 Il est suggéré que cette URL pointe vers une version hébergée de la
 documentation qui est directement lisible via un navigateur web commun,
-aux formats bureau et mobile. La documentation doit être publiée en HTML
-et explorable comme un site web (avec un index de navigation, une barre
-de recherche, etc.).
+aux formats bureau et mobile. Il est recommandé de publier la documentation
+en HTML et de la rendre explorable comme un site web (avec un index de
+navigation, une barre de recherche, etc.).
 
 Si la documentation est uniquement disponible sous la forme d'un document,
 il est nécessaire d'insérer un lien dans la clé, sous la forme d'une URL,
@@ -503,9 +503,9 @@ La valeur doit être une URL pointant vers une version hébergée de la document
 
 Il est suggéré que cette URL pointe vers une version hébergée de la
 documentation qui est immédiatement lisible via un navigateur web commun.
-La documentation doit être publiée en HTML et explorable comme un site web
-(avec un index de navigation, une barre de recherche, etc.). S’il y a une
-référence ou un test de déploiement, cela devrait permettre de proposer
+Il est recommandé de publier la documentation en HTML et de la rendre explorable
+comme un site web (avec un index de navigation, une barre de recherche, etc.).
+S’il y a une référence ou un test de déploiement, cela devrait permettre de proposer
 une interface interactive (ex. Swagger).
 
 Si la documentation est uniquement disponible sous la forme d'un document,
