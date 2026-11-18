@@ -1,92 +1,160 @@
 Types
 =====
 
-Les règles suivantes s'appliquent à toutes les clés des types
-décrits sur cette page.
+Chaque clé indique son type sous son nom. Les valeurs DOIVENT
+suivre les règles de ce type.
 
-.. _string-type:
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   types/string
+   types/boolean
+   types/array
+   types/date
+   types/enumerated-string
+   types/language-tag
+   types/country-code
+   types/email
+   types/path
+   types/uri
+   types/url
+   types/contact
+   types/contractor
+   types/dependency
+   types/organisation
 
 Chaîne de caractères
 --------------------
 
-Une séquence de caractères Unicode. Les valeurs de type date,
-chaîne énumérée, étiquette de langue, code pays, adresse e-mail,
-chemin, URI et URL sont des chaînes et DOIVENT aussi suivre ces
-règles.
+.. raw:: html
 
-Les analyseurs DOIVENT ignorer les espaces blancs en début et en
-fin de chaîne. La valeur restante NE DOIT PAS être vide.
+   <span id="string-type"></span>
 
-Une chaîne NE DOIT PAS contenir de sauts de ligne, sauf si sa clé
-les autorise.
+Voir :doc:`types/string`.
 
-Compter les caractères après avoir supprimé les espaces blancs en
-début et en fin de chaîne. Utiliser les grappes de graphèmes
-étendues définies dans `Unicode Standard Annex #29
-<https://www.unicode.org/reports/tr29/>`__. Par exemple, ``é`` compte
-pour un caractère, qu'il soit stocké comme un seul point de code ou
-comme ``e`` suivi d'un accent combinant.
+Booléen
+-------
 
-La valeur DOIT être une chaîne YAML : un nombre, un booléen ou null
-est une erreur.
+.. raw:: html
 
-.. _enumerated-string-type:
+   <span id="boolean-type"></span>
 
-Chaîne énumérée
----------------
-
-Une chaîne prenant une des valeurs énumérées pour sa clé.
-
-Les valeurs sont sensibles à la casse : les écrire exactement comme
-dans la liste.
-
-.. _array-type:
+Voir :doc:`types/boolean`.
 
 Tableau
 -------
 
-Une séquence YAML de valeurs. Chaque élément DOIT avoir un type
-autorisé par la clé. Lorsqu'une clé autorise plusieurs types, un
-tableau PEUT les mélanger. Par exemple,
-``description/[lang]/screenshots`` peut contenir à la fois des chemins
-et des URL.
+.. raw:: html
 
-Une clé de ce type DOIT contenir une liste même pour un seul élément.
-Par exemple, écrire ``platforms: [web]``.
+   <span id="array-type"></span>
 
-Un tableau DOIT contenir au moins un élément et NE DOIT PAS contenir
-de doublons. Omettre une clé facultative s'il n'y a aucun élément
-à lister.
+Voir :doc:`types/array`.
 
-.. _email-type:
+Dates
+-----
 
-Adresse e-mail
---------------
+.. raw:: html
 
-Une adresse e-mail sous la forme ``addr-spec`` de la `RFC 5322
-<https://www.rfc-editor.org/rfc/rfc5322#section-3.4.1>`__, par exemple
-``jane.doe@example.com``. Les noms d'affichage comme
-``Jane Doe <jane.doe@example.com>`` ne sont pas autorisés.
+   <span id="date-type"></span>
 
-.. _url-type:
+Voir :doc:`types/date`.
 
-URL
----
+Chaîne énumérée
+---------------
 
-Une URL absolue, avec son schéma, par exemple
-``https://example.com/firefax``.
+.. raw:: html
 
-Le schéma DOIT être ``http`` ou ``https``, sauf si la clé en autorise
-d'autres.
+   <span id="enumerated-string-type"></span>
 
-.. _language-tag-type:
+Voir :doc:`types/enumerated-string`.
 
 Balise de langue
 ----------------
 
-Une balise de langue IETF `BCP 47 <https://www.rfc-editor.org/info/bcp47/>`__,
-comme ``en``, ``it`` ou ``de-AT``.
+.. raw:: html
 
-Comme dans BCP 47, les balises ne distinguent pas les majuscules des
-minuscules. Elles DEVRAIENT être écrites avec la casse canonique,
-comme ``de-AT``.
+   <span id="language-tag-type"></span>
+
+Voir :doc:`types/language-tag`.
+
+Code pays
+---------
+
+.. raw:: html
+
+   <span id="country-code-type"></span>
+
+Voir :doc:`types/country-code`.
+
+Adresse e-mail
+--------------
+
+.. raw:: html
+
+   <span id="email-type"></span>
+
+Voir :doc:`types/email`.
+
+Chemin
+------
+
+.. raw:: html
+
+   <span id="path-type"></span>
+
+Voir :doc:`types/path`.
+
+URI
+---
+
+.. raw:: html
+
+   <span id="uri-type"></span>
+
+Voir :doc:`types/uri`.
+
+URL
+---
+
+.. raw:: html
+
+   <span id="url-type"></span>
+
+Voir :doc:`types/url`.
+
+Contact
+-------
+
+.. raw:: html
+
+   <span id="contact-type"></span>
+
+Voir :doc:`types/contact`.
+
+Prestataire
+-----------
+
+.. raw:: html
+
+   <span id="contractor-type"></span>
+
+Voir :doc:`types/contractor`.
+
+Dépendance
+----------
+
+.. raw:: html
+
+   <span id="dependency-type"></span>
+
+Voir :doc:`types/dependency`.
+
+Organisation
+------------
+
+.. raw:: html
+
+   <span id="organisation-type"></span>
+
+Voir :doc:`types/organisation`.
